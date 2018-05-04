@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MultiCellDS type="cell_line" version="1.0.0">
+	<cell_line ID="0" label="">
+		<metadata>
+			<MultiCellDB>
+				<ID>MCDS_L_0000000052</ID>
+				<name>DCIS_ACP2011_15</name>
+			</MultiCellDB>
+			<description>Digital cell line for ductal carcinoma in situ of the breast, anonymized case 15, from Edgerton et al., Analytical Cellular Pathology (2011). DCIS pathologic sub-type is mixed.</description>
+			<citation>
+				<text>
+					If this digital cell line is used in a publication, cite it as:
+					'We used digital cell line DCIS_ACP2011_15 [1] version 1 (MultiCellDB_ID: MCDS_L_0000000052) created with data and contributions from [2-4]'
+					[1] S. H. Friedman et al., MultiCellDS: a standard and a community for sharing multicellular data (2016, submitted)
+					[2] Edgerton, M. E. et al. A novel, patient-specific mathematical pathology approach for assessment of surgical volume: application to ductal carcinoma in situ of the breast. Analytical Cellular Pathology (Amsterdam) 34, 247-263 (2011).
+					[3] Hyun, A. Z., and Macklin, P. Improved patient-specific calibration for agent-based cancer modeling. Journal of Theoretical Biology 317, 422-424 (2013).
+					[4] Macklin, M. E. et al. Patient-calibrated agent-based modelling of ductal carcinoma in situ (DCIS): From microscopic measurements to macroscopic predictions of clinical progression. Journal of Theoretical Biology 301, 122-140 (2012).
+				</text>
+				<URL>http://MathCancer.org</URL>
+				<notes>S. H. Friedman et al., MultiCellDS: a standard and a community for sharing multicellular data (2016, submitted)</notes>
+			</citation>
+			<curation curated="true">
+				<created>2016-03-10T23:11:00Z</created>
+				<last_modified>2016-11-29T19:11:09.746091Z</last_modified>
+				<classification>
+					<classification_number>48.0.0.1</classification_number>
+					<line>48</line>
+					<variant>0</variant>
+					<branch>0</branch>
+					<version>1</version>
+				</classification>
+				<creator>
+					<orcid-identifier>
+						<path>0000-0002-9359-8800</path>
+						<given-names>Ahmadreza</given-names>
+						<family-name>Ghaffarizadeh</family-name>
+						<email>aghaffar@usc.edu</email>
+						<url>http://MathCancer.org</url>
+						<organization-name>University of Southern California</organization-name>
+						<department-name>Center for Applied Molecular Medicine</department-name>
+					</orcid-identifier>
+				</creator>
+				<current_contact>
+					<orcid-identifier>
+						<path>0000-0002-9925-0151</path>
+						<given-names>Paul</given-names>
+						<family-name>Macklin</family-name>
+						<email>Paul.Macklin@usc.edu</email>
+						<url>http://MathCancer.org</url>
+						<organization-name>University of Southern California</organization-name>
+						<department-name>Center for Applied Molecular Medicine</department-name>
+					</orcid-identifier>
+				</current_contact>
+				<curator>
+					<orcid-identifier>
+						<path>0000-0002-9925-0151</path>
+						<given-names>Paul</given-names>
+						<family-name>Macklin</family-name>
+						<email>Paul.Macklin@usc.edu</email>
+						<url>http://MathCancer.org</url>
+						<organization-name>University of Southern California</organization-name>
+						<department-name>Center for Applied Molecular Medicine</department-name>
+					</orcid-identifier>
+				</curator>
+				<last_modified_by>
+					<orcid-identifier>
+						<path>0000-0001-8003-6860</path>
+						<given-names>Samuel H.</given-names>
+						<family-name>Friedman</family-name>
+						<email>samuelf@usc.edu</email>
+						<url>http://MathCancer.org</url>
+						<organization-name>University of Southern California</organization-name>
+						<department-name>Center for Applied Molecular Medicine</department-name>
+					</orcid-identifier>
+				</last_modified_by>
+			</curation>
+			<data_origins>
+				<data_origin>
+					<citation>
+						<DOI>10.3233/ACP-2011-0019</DOI>
+						<URL>http://dx.doi.org/10.3233/ACP-2011-0019</URL>
+						<PMID>21988888</PMID>
+						<PMCID>PMC3613121</PMCID>
+					</citation>
+				</data_origin>
+			</data_origins>
+			<data_analysis>
+				<citation>
+					<DOI>10.1016/j.jtbi.2012.10.017</DOI>
+					<URL>http://www.sciencedirect.com/science/article/pii/S0022519312005504</URL>
+					<URL>http://dx.doi.org/10.1016/j.jtbi.2012.10.017</URL>
+					<PMID>23084996</PMID>
+				</citation>
+			</data_analysis>
+			<data_analysis>
+				<citation>
+					<DOI>10.1016/j.jtbi.2012.02.002</DOI>
+					<URL>http://www.sciencedirect.com/science/article/pii/S0022519312000665</URL>
+					<URL>http://dx.doi.org/10.1016/j.jtbi.2012.02.002</URL>
+					<PMID>22342935</PMID>
+					<PMCID>PMC3322268</PMCID>
+				</citation>
+			</data_analysis>
+			<rights>
+				<license>
+					<LicenseDocument>
+						<name>CC-BY 4.0</name>
+						<URL>https://creativecommons.org/licenses/by/4.0/</URL>
+					</LicenseDocument>
+				</license>
+			</rights>
+			<cell_origin>
+				<species>Homo sapiens</species>
+				<organ>Mammary gland; Breast</organ>
+				<disease>ductal carcinoma in situ</disease>
+				<morphology>mixed</morphology>
+			</cell_origin>
+			<notes>
+				Information NOT about where data came from in plain text
+			</notes>
+		</metadata>
+		<phenotype_dataset ID="0" keywords="viable">
+			<microenvironment>
+				<domain>
+					<variables>
+						<variable ChEBI_ID="15379" name="oxygen" type="partial_pressure" units="mmHg">
+							<material_amount measurement_type="inferred">6.17</material_amount>
+						</variable>
+						<variable name="DCIS_cell_density(2D)" type="surface_density" units="1/micron^2">
+							<material_amount measurement_type="direct" standard_deviation="0.00158">0.00883</material_amount>
+						</variable>
+						<variable name="DCIS_cell_area_fraction" type="area_fraction" units="dimensionless">
+							<material_amount measurement_type="estimated">0.8</material_amount>
+						</variable>
+						<variable name="DCIS_cell_volume_fraction" type="volume_fraction" units="dimensionless">
+							<material_amount measurement_type="estimated">0.8</material_amount>
+						</variable>
+					</variables>
+				</domain>
+			</microenvironment>
+			<phenotype type="expected">
+				<cell_cycle ID="0" model="Ki67_advanced">
+					<cell_cycle_phase ID="0" name="Ki67_premitotic">
+						<duration measurement_type="estimated" units="hour">13.0</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<cell_cycle_phase ID="1" name="Ki67_postmitotic">
+						<duration measurement_type="estimated" units="hour">2.5</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<cell_cycle_phase ID="2" name="quiescent">
+						<duration measurement_type="inferred" units="hour">3178.85</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">4342.15</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_cycle ID="1" model="Ki67_basic">
+					<cell_cycle_phase ID="0" name="proliferating">
+						<duration measurement_type="estimated" units="hour">18.0</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<cell_cycle_phase ID="1" name="quiescent">
+						<duration measurement_type="inferred" units="hour">3173.93</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">4342.15</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_cycle ID="2" model="live_dead">
+					<cell_cycle_phase ID="0" name="live">
+						<birth_rate measurement_type="inferred" units="1/hour">0.000312</birth_rate>
+						<duration measurement_type="inferred" units="hour">6264.4</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">4342.15</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_cycle ID="3" model="total_cells">
+					<cell_cycle_phase ID="0" name="all">
+						<duration measurement_type="inferred" units="hour">6264.4</duration>
+						<net_birth_rate measurement_type="inferred" units="1/hour">0.00016</net_birth_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">4342.15</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_death ID="0" type="apoptosis">
+					<duration measurement_type="estimated" units="hour">8.6</duration>
+				</cell_death>
+				<geometrical_properties>
+					<lengths>
+						<radius measurement_type="inferred" units="micron">5.37</radius>
+					</lengths>
+					<areas>
+						<total_surface_area measurement_type="inferred" units="micron^2">362.4</total_surface_area>
+					</areas>
+					<volumes>
+						<total_volume measurement_type="inferred" units="micron^3">648.72</total_volume>
+					</volumes>
+					<cross_section>
+						<areas>
+							<total_area measurement_type="inferred" units="micron^2">90.6</total_area>
+						</areas>
+					</cross_section>
+				</geometrical_properties>
+			</phenotype>
+		</phenotype_dataset>
+		<phenotype_dataset ID="1" keywords="hypoxic">
+			<microenvironment>
+				<domain>
+					<variables>
+						<variable ChEBI_ID="15379" name="oxygen" type="partial_pressure" units="mmHg">
+							<material_amount measurement_type="inferred">8.0</material_amount>
+						</variable>
+					</variables>
+				</domain>
+			</microenvironment>
+			<phenotype type="expected">
+				<cell_cycle ID="0" model="Ki67_advanced">
+					<cell_cycle_phase ID="0" name="Ki67_premitotic">
+						<duration measurement_type="estimated" units="hour">13.0</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<cell_cycle_phase ID="1" name="Ki67_postmitotic">
+						<duration measurement_type="estimated" units="hour">2.5</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<cell_cycle_phase ID="2" name="quiescent">
+						<duration measurement_type="inferred" units="hour">1244.23</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">1095.97</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_cycle ID="1" model="Ki67_basic">
+					<cell_cycle_phase ID="0" name="proliferating">
+						<duration measurement_type="estimated" units="hour">17.99</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<cell_cycle_phase ID="1" name="quiescent">
+						<duration measurement_type="inferred" units="hour">1239.43</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">1095.97</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_cycle ID="2" model="live_dead">
+					<cell_cycle_phase ID="0" name="live">
+						<birth_rate measurement_type="inferred" units="1/hour">0.000784</birth_rate>
+						<duration measurement_type="inferred" units="hour">1581.15</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">1095.97</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_cycle ID="3" model="total_cells">
+					<cell_cycle_phase ID="0" name="all">
+						<duration measurement_type="inferred" units="hour">1581.15</duration>
+						<net_birth_rate measurement_type="inferred" units="1/hour">0.000632</net_birth_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">1095.97</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_death ID="0" type="apoptosis">
+					<duration measurement_type="estimated" units="hour">8.6</duration>
+				</cell_death>
+			</phenotype>
+		</phenotype_dataset>
+		<phenotype_dataset ID="2" keywords="physioxia(standard)">
+			<microenvironment>
+				<domain>
+					<variables>
+						<variable ChEBI_ID="15379" name="oxygen" type="partial_pressure" units="mmHg">
+							<material_amount measurement_type="inferred">38.0</material_amount>
+						</variable>
+					</variables>
+				</domain>
+			</microenvironment>
+			<phenotype type="expected">
+				<cell_cycle ID="0" model="Ki67_advanced">
+					<cell_cycle_phase ID="0" name="Ki67_premitotic">
+						<duration measurement_type="estimated" units="hour">13.0</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<cell_cycle_phase ID="1" name="Ki67_postmitotic">
+						<duration measurement_type="estimated" units="hour">2.5</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<cell_cycle_phase ID="2" name="quiescent">
+						<duration measurement_type="inferred" units="hour">113.11</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">100.18</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_cycle ID="1" model="Ki67_basic">
+					<cell_cycle_phase ID="0" name="proliferating">
+						<duration measurement_type="estimated" units="hour">17.91</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<cell_cycle_phase ID="1" name="quiescent">
+						<duration measurement_type="inferred" units="hour">109.62</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">100.18</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_cycle ID="2" model="live_dead">
+					<cell_cycle_phase ID="0" name="live">
+						<birth_rate measurement_type="inferred" units="1/hour">0.00707</birth_rate>
+						<duration measurement_type="inferred" units="hour">144.53</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">100.18</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_cycle ID="3" model="total_cells">
+					<cell_cycle_phase ID="0" name="all">
+						<duration measurement_type="inferred" units="hour">144.53</duration>
+						<net_birth_rate measurement_type="inferred" units="1/hour">0.00692</net_birth_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">100.18</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_death ID="0" type="apoptosis">
+					<duration measurement_type="estimated" units="hour">8.6</duration>
+				</cell_death>
+			</phenotype>
+		</phenotype_dataset>
+		<phenotype_dataset ID="3" keywords="physioxia(breast)">
+			<microenvironment>
+				<domain>
+					<variables>
+						<variable ChEBI_ID="15379" name="oxygen" type="partial_pressure" units="mmHg">
+							<material_amount measurement_type="inferred">52.0</material_amount>
+						</variable>
+					</variables>
+				</domain>
+			</microenvironment>
+			<phenotype type="expected">
+				<cell_cycle ID="0" model="Ki67_advanced">
+					<cell_cycle_phase ID="0" name="Ki67_premitotic">
+						<duration measurement_type="estimated" units="hour">13.0</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<cell_cycle_phase ID="1" name="Ki67_postmitotic">
+						<duration measurement_type="estimated" units="hour">2.5</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<cell_cycle_phase ID="2" name="quiescent">
+						<duration measurement_type="inferred" units="hour">79.42</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">75.36</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_cycle ID="1" model="Ki67_basic">
+					<cell_cycle_phase ID="0" name="proliferating">
+						<duration measurement_type="estimated" units="hour">17.89</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<cell_cycle_phase ID="1" name="quiescent">
+						<duration measurement_type="inferred" units="hour">76.31</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">75.36</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_cycle ID="2" model="live_dead">
+					<cell_cycle_phase ID="0" name="live">
+						<birth_rate measurement_type="inferred" units="1/hour">0.00935</birth_rate>
+						<duration measurement_type="inferred" units="hour">108.72</duration>
+						<death_rate measurement_type="inferred" type="apoptosis" units="1/hour">0.000152</death_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">75.36</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_cycle ID="3" model="total_cells">
+					<cell_cycle_phase ID="0" name="all">
+						<duration measurement_type="inferred" units="hour">108.72</duration>
+						<net_birth_rate measurement_type="inferred" units="1/hour">0.0092</net_birth_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">75.36</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_death ID="0" type="apoptosis">
+					<duration measurement_type="estimated" units="hour">8.6</duration>
+				</cell_death>
+			</phenotype>
+		</phenotype_dataset>
+		<phenotype_dataset ID="4" keywords="necrotic,chronic hypoxia">
+			<microenvironment>
+				<domain>
+					<variables>
+						<variable ChEBI_ID="15379" name="oxygen" type="partial_pressure" units="mmHg">
+							<material_amount measurement_type="inferred">5.0</material_amount>
+						</variable>
+					</variables>
+				</domain>
+			</microenvironment>
+			<phenotype type="expected">
+				<cell_cycle ID="0" model="Ki67_advanced">
+					<cell_cycle_phase ID="0" name="Ki67_premitotic">
+						<duration measurement_type="estimated" units="hour">13.0</duration>
+						<death_rate measurement_type="inferred" type="necrosis" units="1/hour">0.0104</death_rate>
+					</cell_cycle_phase>
+					<cell_cycle_phase ID="1" name="Ki67_postmitotic">
+						<duration measurement_type="estimated" units="hour">2.5</duration>
+						<death_rate measurement_type="inferred" type="necrosis" units="1/hour">0.0104</death_rate>
+					</cell_cycle_phase>
+					<cell_cycle_phase ID="2" name="quiescent">
+						<duration measurement_type="inferred" units="hour">INF</duration>
+						<death_rate measurement_type="inferred" type="necrosis" units="1/hour">0.0104</death_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">INF</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_cycle ID="1" model="Ki67_basic">
+					<cell_cycle_phase ID="0" name="proliferating">
+						<duration measurement_type="estimated" units="hour">18.0</duration>
+						<death_rate measurement_type="inferred" type="necrosis" units="1/hour">0.0104</death_rate>
+					</cell_cycle_phase>
+					<cell_cycle_phase ID="1" name="quiescent">
+						<duration measurement_type="inferred" units="hour">INF</duration>
+						<death_rate measurement_type="inferred" type="necrosis" units="1/hour">0.0104</death_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">INF</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_cycle ID="2" model="live_dead">
+					<cell_cycle_phase ID="0" name="live">
+						<birth_rate measurement_type="inferred" units="1/hour">0.0</birth_rate>
+						<duration measurement_type="inferred" units="hour">INF</duration>
+						<death_rate measurement_type="inferred" type="necrosis" units="1/hour">0.0104</death_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">INF</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_cycle ID="3" model="total_cells">
+					<cell_cycle_phase ID="0" name="all">
+						<duration measurement_type="inferred" units="hour">INF</duration>
+						<net_birth_rate measurement_type="inferred" units="1/hour">-0.0104</net_birth_rate>
+					</cell_cycle_phase>
+					<summary_elements>
+						<population_doubling_time measurement_type="inferred" units="hour">INF</population_doubling_time>
+					</summary_elements>
+				</cell_cycle>
+				<cell_death ID="0" type="necrosis">
+					<duration measurement_type="estimated" units="hour">1440.0</duration>
+				</cell_death>
+			</phenotype>
+		</phenotype_dataset>
+	</cell_line>
+</MultiCellDS>
