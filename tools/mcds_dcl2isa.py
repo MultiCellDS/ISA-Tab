@@ -10,6 +10,8 @@
 #    a_<DCL-root-filename>.txt
 #
 # Author: Randy Heiland
+# Date:
+#   v0.1 - May 2018
 # 
 
 import sys
@@ -233,3 +235,58 @@ fp.write('Comment[Study Person REF]\t""\n')
 
 fp.close()
 print(' --> ' + investigation_filename)
+
+
+#=======================================================================
+fp = open(study_filename, 'w')
+
+fp.write('Source Name' + sep_char)
+source_name = i_identifier[1:-1] + '.0'
+
+uep = xml_root.find('.//data_origins')  # uep = unique entry point
+for elm in uep.findall('data_origin'):
+  for elm2 in elm.findall('citation'):
+    fp.write('Comment[citation]' + sep_char)
+#    doi.append(elm.find('.//DOI').text)
+#    pmid.append(elm.find('.//PMID').text)
+    pmid_origin = elm.find('.//PMID').text
+
+uep = xml_root.find('.//metadata')
+for elm in uep.findall('data_analysis'):
+  for elm2 in elm.findall('citation'):
+    fp.write('Comment[citation]' + sep_char)
+#    print(' "' + el.find('.//PMID').text + '"', end='')
+#  doi.append(elm.find('.//DOI').text)
+#  pmid.append(elm.find('.//PMID').text)
+
+uep = xml_root.find('.//cell_origin')
+cell_origin_characteristics = []
+for elm in uep.getchildren():
+  fp.write('Characteristics[' + elm.tag + ']' + sep_char)
+  cell_origin_characteristics.append(elm.text)
+
+fp.write('Factor Value[phenotype_dataset]' + sep_char + 'Sample Name\n')
+
+uep = xml_root.find('.//cell_line')
+suffix = 0
+for elm in uep.findall('phenotype_dataset'):
+  row_str = source_name + sep_char 
+  for p in pmid:
+    row_str += 'PMID: ' + p + sep_char
+  for c in cell_origin_characteristics:
+    row_str += c + sep_char 
+  row_str += elm.attrib['keywords'] + sep_char + source_name + '.' + str(suffix)
+              
+  suffix += 1
+#  print(row_str)
+  fp.write(row_str + '\n')
+
+fp.close()
+print(' --> ' + study_filename)
+
+
+#=======================================================================
+#fp = open(assay_filename, 'w')
+
+#fp.close()
+#print(' --> ' + assay_filename)
