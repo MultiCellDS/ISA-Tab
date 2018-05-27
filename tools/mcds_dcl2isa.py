@@ -29,11 +29,11 @@ else:
 #xml_file = "MCDS_L_0000000052.xml"
 
 header = '\
-ONTOLOGY SOURCE REFERENCE \n\
-Term Source Name	"NCIT"	"UO"	"NCBITAXON"	"EDDA" \n\
-Term Source File	"https://ncit.nci.nih.gov/ncitbrowser/"	"https://bioportal.bioontology.org/ontologies/UO"	"http://purl.obolibrary.org/obo/NCBITaxon_1"	"http://bioportal.bioontology.org/ontologies/EDDA" \n\
+ONTOLOGY SOURCE REFERENCE\n\
+Term Source Name	"NCIT"	"UO"	"NCBITAXON"	"EDDA"\n\
+Term Source File	"https://ncit.nci.nih.gov/ncitbrowser/"	"https://bioportal.bioontology.org/ontologies/UO"	"http://purl.obolibrary.org/obo/NCBITaxon_1"	"http://bioportal.bioontology.org/ontologies/EDDA"\n\
 Term Source Version	"17.02d"	""	""	"2.0"\n\
-Term Source Description	"NCI Thesarus"	""	""	"Evidence in Documents, Discovery, and Analytics (EDDA)"  \
+Term Source Description	"NCI Thesarus"	""	""	"Evidence in Documents, Discovery, and Analytics (EDDA)"\
 '
 
 if not Path(xml_file).is_file():
@@ -64,7 +64,9 @@ fp.write('Investigation Submission Date' + sep_char + '""\n')
 fp.write('Investigation Public Release Date \t "" \n') 
 citation_str = '"' + re.sub('[\t\n]','',xml_root.find(".//citation").find(".//text").text) + '"'  # remove all tabs and newlines 
 fp.write('Comment [MultiCellDS/cell_line/metadata/citation/text]' + sep_char + citation_str + '\n')
-fp.write('Comment [MultiCellDS/cell_line/metadata/citation/notes]' + sep_char + xml_root.find(".//citation").find(".//notes").text  + '\n')
+
+if (xml_root.find(".//citation").find(".//notes")):
+  fp.write('Comment [MultiCellDS/cell_line/metadata/citation/notes]' + sep_char + xml_root.find(".//citation").find(".//notes").text  + '\n')
   
 
 fp.write('INVESTIGATION PUBLICATIONS\n')
@@ -102,6 +104,7 @@ fp.write('Investigation Publication Author List' + empty_str + '\n')
 fp.write('Investigation Publication Title' + empty_str + '\n')
 
 pub_status_str = ''.join('\t"Published"' for x in pmid) 
+pub_title_str = ''.join('\t""' for x in pmid) 
 fp.write('Investigation Publication Status' + pub_status_str + '\n')
 pub_status_TA_str = ''.join('\t"C19026"' for x in pmid) 
 fp.write('Investigation Publication Status Term Accession' + pub_status_TA_str + '\n')
@@ -109,7 +112,7 @@ pub_status_TSR_str = ''.join('\t"NCIT"' for x in pmid)
 fp.write('Investigation Publication Status Term Source REF' + pub_status_TSR_str + '\n')
 
 fp.write('INVESTIGATION CONTACTS\n') 
-fp.write('Investigation Person Last Name' + sep_char_sq + xml_root.find(".//current_contact").find(".//family-name").text + '"\n') 
+fp.write('Investigation Person Last Name' + sep_char_sq + xml_root.find(".//current_contact").find(".//family-name").text + '"\t\n') 
 fp.write('Investigation Person First Name' + sep_char_sq + xml_root.find(".//current_contact").find(".//given-names").text + '"\n') 
 fp.write('Investigation Person Mid Initials' + sep_char + '""\n')
 fp.write('Investigation Person Email' +  sep_char_sq + xml_root.find(".//current_contact").find(".//email").text + '"\n') 
@@ -143,15 +146,15 @@ fp.write('Study Design Type Term Source REF\t""\n')
 # TODO? are these different than the previous pubs?
 fp.write('STUDY PUBLICATIONS\n')
 fp.write('Study PubMed ID' + pmid_str + '\n')
-fp.write('Study Publication DOI' + doi_str + '\n')
+fp.write('Study Publication DOI' + doi_str + sep_char + '\n')
 fp.write('Study Publication Author List' + empty_str + '\n')
-fp.write('Study Publication Title')
-fp.write('Study Publication Status' + pub_status_str + '\n')
-fp.write('Study Publication Status Term Accession Number' + pub_status_TA_str + '\n')
+fp.write('Study Publication Title' + pub_title_str + '\n')
+fp.write('Study Publication Status' + pub_status_str + sep_char + '\n')
+fp.write('Study Publication Status Term Accession Number' + pub_status_TA_str + sep_char + '\n')
 fp.write('Study Publication Status Term Source REF' + pub_status_TSR_str + '\n')
 
 
-fp.write('STUDY FACTORS\n')
+fp.write('STUDY FACTORS' + 3*sep_char + '\n')
 fp.write('Study Factor Name\t"phenotype_dataset"\n')
 fp.write('Study Factor Type\t""\n')
 fp.write('Study Factor Type Term Accession Number\t""\n')
@@ -166,7 +169,7 @@ for elm in uep.findall('phenotype_dataset'):
 fp.write(comment_str[:-2] + '"\n')
 
 
-fp.write('STUDY ASSAYS\n')
+fp.write('STUDY ASSAYS\t\n')
 fp.write('Study Assay Measurement Type\t""\n')
 fp.write('Study Assay Measurement Type Term Accession Number\t""\n')
 fp.write('Study Assay Measurement Type Term Source REF\t""\n')
@@ -177,7 +180,7 @@ fp.write('Study Assay Technology Platform\t""\n')
 fp.write('Study Assay File Name\t' + '"' + assay_filename + '"\n')
 
 
-fp.write('STUDY PROTOCOLS\n')
+fp.write('STUDY PROTOCOLS\t\n')
 fp.write('Study Protocol Name\t"microenvironment.measurement"\n')
 fp.write('Study Protocol Type\t""\n')
 fp.write('Study Protocol Type Term Accession Number\t""\n')
@@ -189,10 +192,11 @@ fp.write('Study Protocol Version\t""\n')
 comment_str = 'Study Protocol Parameters Name\t"'
 # TODO? search for all phenotype_dataset/microenvironment/domain/variables/...
 uep = xml_root.find('.//variables')
-for elm in uep.findall('variable'):
-  comment_str += elm.attrib['name'] + '.' + elm.attrib['type'] + '; '
+if (uep):
+  for elm in uep.findall('variable'):
+    comment_str += elm.attrib['name'] + '.' + elm.attrib['type'] + '; '
 #  print(comment_str)
-fp.write(comment_str[:-2] + '"\n')
+  fp.write(comment_str[:-2] + '"\n')
 
 semicolon_sep_empty_str = ''.join('; ' for x in pmid)
 fp.write('Study Protocol Parameters Name Term Accession Number\t" ' + semicolon_sep_empty_str + ' "\n')
@@ -203,7 +207,7 @@ fp.write('Study Protocol Components Type Term Accession Number\t"' + semicolon_s
 fp.write('Study Protocol Components Type Term Source REF\t"' + semicolon_sep_empty_str + ' "\n')
 
 
-fp.write('STUDY CONTACTS\n')
+fp.write('STUDY CONTACTS\t\n')
 fp.write('Study Person Last Name\t"' + xml_root.find(".//current_contact").find(".//family-name").text + '"\n') 
 fp.write('Study Person First Name\t"' + xml_root.find(".//current_contact").find(".//given-names").text + '"\n') 
 fp.write('Study Person Mid Initials\t""\n')
@@ -231,7 +235,7 @@ fp.write('Comment[last_modified_by_orcid-id_given-names]\t"' + xml_root.find("./
 fp.write('Comment[last_modified_by_orcid-id_email]\t"' + xml_root.find(".//last_modified_by").find(".//email").text + '"\n')
 fp.write('Comment[last_modified_by_orcid-id_organization-name]\t"' +  xml_root.find(".//last_modified_by").find(".//organization-name").text + 
             ', ' + xml_root.find(".//last_modified_by").find(".//department-name").text + '"\n') 
-fp.write('Comment[Study Person REF]\t""\n')
+fp.write('Comment[Study Person REF]' + sep_char + '""' + '\n')
 
 fp.close()
 print(' --> ' + investigation_filename)
@@ -247,17 +251,12 @@ uep = xml_root.find('.//data_origins')  # uep = unique entry point
 for elm in uep.findall('data_origin'):
   for elm2 in elm.findall('citation'):
     fp.write('Comment[citation]' + sep_char)
-#    doi.append(elm.find('.//DOI').text)
-#    pmid.append(elm.find('.//PMID').text)
     pmid_origin = elm.find('.//PMID').text
 
 uep = xml_root.find('.//metadata')
 for elm in uep.findall('data_analysis'):
   for elm2 in elm.findall('citation'):
     fp.write('Comment[citation]' + sep_char)
-#    print(' "' + el.find('.//PMID').text + '"', end='')
-#  doi.append(elm.find('.//DOI').text)
-#  pmid.append(elm.find('.//PMID').text)
 
 uep = xml_root.find('.//cell_origin')
 cell_origin_characteristics = []
@@ -286,7 +285,10 @@ print(' --> ' + study_filename)
 
 
 #=======================================================================
-#fp = open(assay_filename, 'w')
+fp = open(assay_filename, 'w')
 
-#fp.close()
-#print(' --> ' + assay_filename)
+fp.write('Sample Name' + sep_char + 'Protocol REF' + sep_char + 'Parameter Value[')
+
+
+fp.close()
+print(' --> ' + assay_filename)
