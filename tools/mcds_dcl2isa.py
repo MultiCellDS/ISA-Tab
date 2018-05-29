@@ -49,7 +49,7 @@ fp = open(investigation_filename, 'w')
 tree = ET.parse(xml_file)  # TODO: relative path using env var?
 xml_root = tree.getroot()
 
-sep_char = '\t'
+sep_char = '\t'  # tab
 
 fp.write(header + '\n')
 fp.write('INVESTIGATION\n')
@@ -65,6 +65,7 @@ fp.write('Investigation Public Release Date \t "" \n')
 citation_str = '"' + re.sub('[\t\n]','',xml_root.find(".//citation").find(".//text").text) + '"'  # remove all tabs and newlines 
 fp.write('Comment [MultiCellDS/cell_line/metadata/citation/text]' + sep_char + citation_str + '\n')
 
+# TODO: check that "citation" exists first?
 if (xml_root.find(".//citation").find(".//notes")):
   fp.write('Comment [MultiCellDS/cell_line/metadata/citation/notes]' + sep_char + xml_root.find(".//citation").find(".//notes").text  + '\n')
   
@@ -286,9 +287,53 @@ print(' --> ' + study_filename)
 
 #=======================================================================
 fp = open(assay_filename, 'w')
+"""
+Sample Name Protocol REF  Parameter Value[oxygen.partial_pressure]  Unit  Parameter Value[DCIS_cell_density(2D).surface_density]  Unit  Parameter Value[DCIS_cell_area_fraction.area_fraction]  Unit  Parameter Value[DCIS_cell_volume_fraction.volume_fraction]  Unit  Data File
+MCDS_L_0000000052.0.0 microenvironment.measurement  6.17  mmHg  0.00883 1/micron^2  0.8 dimensionless 0.8 dimensionless MCDS_L_0000000052.xml
+MCDS_L_0000000052.0.1 microenvironment.measurement  8 mmHg              MCDS_L_0000000052.xml
+MCDS_L_0000000052.0.2 microenvironment.measurement  38  mmHg              MCDS_L_0000000052.xml
+MCDS_L_0000000052.0.3 microenvironment.measurement  52  mmHg              MCDS_L_0000000052.xml
+MCDS_L_0000000052.0.4 microenvironment.measurement  5 mmHg              MCDS_L_0000000052.xml
+"""
 
-fp.write('Sample Name' + sep_char + 'Protocol REF' + sep_char + 'Parameter Value[')
+# Columns' titles
+fp.write('Sample Name' + sep_char + 'Protocol REF' + sep_char )
+uep = xml_root.find('.//variables')  # TODO: also req: keywords="viable"?
+if (uep):
+  num_vars = 0
+  for elm in uep.findall('variable'):
+    pval_str = elm.attrib['name'] + '.' + elm.attrib['type']
+    fp.write('Parameter Value[' + pval_str + '] ' + sep_char + 'Unit' + sep_char)
+    num_vars += 1
+fp.write('Data File\n')
+#print('num_vars=',num_vars)
 
+count = 0
+# TODO: am I making too many assumptions about elements - ordering, etc.?
+id = xml_root.find(".//metadata").find(".//ID").text
+uep = xml_root.find('.//cell_line')
+for elm in uep.findall('phenotype_dataset'):
+  comment_str = id + '.0.' + str(count) + '\t' + 'microenvironment.measurement' 
+#  print(comment_str)
+  vs = elm.find('.//variables') 
+  nvar = 0
+#  for ma in v.findall('material_amount'):
+  for v in vs.findall('variable'):
+    nvar += 1
+#    print(v.attrib['units'])
+#    print(v.find('.//material_amount').text)
+    comment_str += sep_char + v.find('.//material_amount').text + sep_char + v.attrib['units']
+#  print(comment_str)
+#  print('nvar=',nvar)
+  fp.write(comment_str)
+  if (nvar == num_vars):
+    fp.write(sep_char)
+  else:
+    for idx in range(nvar,2*num_vars):
+      fp.write(sep_char)
+#  fp.write(comment_str + sep_char + xml_file + '\n')
+  fp.write(xml_file + '\n')
+  count += 1
 
 fp.close()
 print(' --> ' + assay_filename)
