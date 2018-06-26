@@ -338,7 +338,8 @@ for elm in uep.findall('phenotype_dataset'):
     count += 1
 
   else:  # if no 'variables' present, just print minimal info
-    comment_str = id + '.0' + '\t' + '' + '\t' + xml_file + '\n'
+    comment_str = id + '.0.' + str(count) + '\t' + '' + '\t' + xml_file + '\n' 
+    count += 1
     fp.write(comment_str)
 
 
