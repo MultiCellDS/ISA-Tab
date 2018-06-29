@@ -1,0 +1,11 @@
+Source Name	Comment[citation]	Comment[citation]	Comment[citation]	Comment[citation]	Characteristics[BTO_ID]	Characteristics[CLO_ID]	Characteristics[species]	Characteristics[organ]	Characteristics[custom]	Factor Value[phenotype_dataset]	Sample Name
+MCDS_L_0000000043.0	PMID: 21920451	PMID: 	PMID: 	PMID: 	PMID: 	0001949	0004307	Homo sapiens	Umbilical Vein; Umbilical Cord	
+						normoxic,phalanx,vegfA165,	MCDS_L_0000000043.0.0
+MCDS_L_0000000043.0	PMID: 21920451	PMID: 	PMID: 	PMID: 	PMID: 	0001949	0004307	Homo sapiens	Umbilical Vein; Umbilical Cord	
+						normoxic,tip,CD34+,vegfA165+,glass surface	MCDS_L_0000000043.0.1
+MCDS_L_0000000043.0	PMID: 21920451	PMID: 	PMID: 	PMID: 	PMID: 	0001949	0004307	Homo sapiens	Umbilical Vein; Umbilical Cord	
+						normoxic,tip,CD34+,vegfA165+,fibrin surface	MCDS_L_0000000043.0.2
+MCDS_L_0000000043.0	PMID: 21920451	PMID: 	PMID: 	PMID: 	PMID: 	0001949	0004307	Homo sapiens	Umbilical Vein; Umbilical Cord	
+						normoxic,stalk,CD34-,vegfA165,multiple_words_together	MCDS_L_0000000043.0.3
+MCDS_L_0000000043.0	PMID: 21920451	PMID: 	PMID: 	PMID: 	PMID: 	0001949	0004307	Homo sapiens	Umbilical Vein; Umbilical Cord	
+						normoxic,all,vegfA189+,gelatin surface	MCDS_L_0000000043.0.4

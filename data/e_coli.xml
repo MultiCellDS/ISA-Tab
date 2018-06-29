@@ -1,0 +1,133 @@
+<MultiCellDS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <cell_line label="e_coli" ID="0">
+        <metadata>
+			<MultiCellDB>
+			    <ID>MCDS_L_0000000045</ID>
+				<name>E_coli</name>
+			</MultiCellDB>
+			<description>
+                This is a digital cell line for E. coli.
+            </description>
+            <citation>
+                <text>
+                    If this digital cell line is used in a publication, cite it as:
+                    "We used digital cell line E_coli [1] version 1 (MultiCellDB_ID: MCDS_L_0000000045), created with data and contributions from [2]
+                    [1] S. H. Friedman et al., MultiCellDS: a standard and a community for sharing multicellular data (2016, submitted)
+                    [2] Eaton P, Fernandes JC, Pereira E, Pintado ME, Malcata FX. Atomic force microscopy study of the antibacterial effects of chitosans on Escherichia coli and Staphylococcus aureus (2008) Ultramicroscopy 108(10) P. 1128	
+                </text>			
+                <URL>http://MathCancer.org</URL>
+                <notes>[1] S. H. Friedman et al., MultiCellDS: a standard and a community for sharing multicellular data (2016, submitted)</notes>
+            </citation>
+            
+			<curation>
+                <created>2016-08-09T13:01:00-07:00</created>
+			    <last_modified>2016-11-29T11:00:00-08:00</last_modified>
+                <classification>
+					<classification_number>41.0.0.1</classification_number>
+					<line>41</line>
+					<variant>0</variant>
+					<branch>0</branch>
+					<version>1</version>
+				</classification>
+                <creator>
+                    <orcid-identifier>
+                        <path>0000-0001-8003-6860</path>
+                        <given-names>Samuel H.</given-names>               
+                        <family-name>Friedman</family-name>
+                        <email>samuelf@usc.edu</email>
+                        <url>http://MathCancer.org</url>
+                        <organization-name>University of Southern California</organization-name>
+                        <department-name>Center for Applied Molecular Medicine</department-name>
+                    </orcid-identifier>
+                </creator>
+                <current_contact>
+                    <orcid-identifier>
+                        <path>0000-0001-8003-6860</path>
+                        <given-names>Samuel H.</given-names>               
+                        <family-name>Friedman</family-name>
+                        <email>samuelf@usc.edu</email>
+                        <url>http://MathCancer.org</url>
+                        <organization-name>University of Southern California</organization-name>
+                        <department-name>Center for Applied Molecular Medicine</department-name>
+                    </orcid-identifier>
+                </current_contact>
+                <last_modified_by>
+					<orcid-identifier>
+        				<path>0000-0001-8003-6860</path>
+        				<given-names>Samuel H.</given-names>               
+        				<family-name>Friedman</family-name>
+        				<email>samuelf@usc.edu</email>
+        				<url>http://MathCancer.org</url>
+        				<organization-name>University of Southern California</organization-name>
+        				<department-name>Center for Applied Molecular Medicine</department-name>
+    				</orcid-identifier>
+				</last_modified_by>
+            </curation>
+			<data_origins>
+                <data_origin>
+                    <citation>
+                        <DOI>http://dx.doi.org/10.1016/j.ultramic.2008.04.015</DOI>
+                        <notes>Eaton et al (2008) Atomic force microscopy study of the antibacterial effects of chitosans on Escherichia coli and Staphylococcus aureus</notes>
+                    </citation>
+                    <xpath>
+                        /MultiCellDS/cell_line[1]/metadata[1]/cell_origin[1]/species[1]
+                        /MultiCellDS/cell_line[1]/metadata[1]/cell_origin[1]/strain[1]
+                        /MultiCellDS/cell_line[1]/phenotype_dataset[1]/microenvironment[1]/domain[1]/variables[1]/physical_parameter_set[1]/conditions[1]/temperature[1]
+                        /MultiCellDS/cell_line[1]/phenotype_dataset[1]/phenotype[1]/mechanics[1]/youngs_modulus[1]
+                        /MultiCellDS/cell_line[1]/phenotype_dataset[1]/phenotype[1]/mechanics[1]/youngs_modulus[1]/@standard_deviation
+                        /MultiCellDS/cell_line[1]/phenotype_dataset[1]/phenotype[1]/geometrical_properties[1]/lengths[1]/major_axis[1]/@range
+                        /MultiCellDS/cell_line[1]/phenotype_dataset[1]/phenotype[1]/geometrical_properties[1]/lengths[1]/minor_axis[1]/@range
+                    </xpath>
+                </data_origin>
+            </data_origins>
+			<rights>
+    			<license>
+        			<LicenseDocument>
+            			<name>CC-BY 4.0</name>
+            			<URL>https://creativecommons.org/licenses/by/4.0/</URL>
+        			</LicenseDocument>
+    			</license>
+			</rights>
+			<cell_origin>
+                <species>Escherichia coli</species>
+                <strain>NCTC 9001</strain>
+            </cell_origin>
+			<notes>
+                Axial length values were assumed to be the midpoint of the range of values reported:
+                /MultiCellDS/cell_line[1]/phenotype_dataset[1]/phenotype[1]/geometrical_properties[1]/lengths[1]/major_axis[1]
+                /MultiCellDS/cell_line[1]/phenotype_dataset[1]/phenotype[1]/geometrical_properties[1]/lengths[1]/minor_axis[1]
+            </notes>
+		</metadata>
+        <phenotype_dataset ID="0" keywords="normal">
+            <microenvironment>
+                <domain>
+                    <variables>
+                        <variable name="Oxygen" ChEBI_ID="15379">
+                            <material_amount units="mmHg" measurement_type="assumed">160</material_amount>
+                        </variable>
+                        <physical_parameter_set>
+                            <conditions>
+                                <temperature units="Celsius">37</temperature>
+                            </conditions>
+                        </physical_parameter_set>
+                    </variables>
+                    <experimental_condition>
+                        <system>in vitro</system>
+                        <conditions>surface</conditions>
+                    </experimental_condition>
+                </domain>
+            </microenvironment>
+            <phenotype>	
+				<geometrical_properties>
+                    <lengths>
+                        <major_axis units="microns" range="1.6 2.5" measurement_type="literature">2.05</major_axis>
+                        <minor_axis units="microns" range="0.250 0.300" measurement_type="literature">0.275</minor_axis>
+                    </lengths>
+                </geometrical_properties>
+				<mechanics>
+                    <youngs_modulus units="MPa" measurement_type="literature" standard_deviation="11.9">221.4</youngs_modulus>
+                </mechanics>
+			</phenotype>
+        </phenotype_dataset>
+    </cell_line>
+</MultiCellDS>

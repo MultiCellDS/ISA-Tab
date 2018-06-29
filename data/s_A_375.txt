@@ -1,0 +1,3 @@
+Source Name	Comment[citation]	Characteristics[BTO_ID]	Characteristics[CLO_ID]	Characteristics[species]	Characteristics[organ]	Characteristics[disease]	Characteristics[morphology]	Factor Value[phenotype_dataset]	Sample Name
+MCDS_L_0000000007.0	PMID: 	PMID: 	0002806
+	0001582	Homo Sapiens	Skin	Malignant Melanoma - Mesenchyme	Epithelial-like	Normoxia	MCDS_L_0000000007.0.0

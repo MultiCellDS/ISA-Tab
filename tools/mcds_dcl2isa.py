@@ -79,14 +79,41 @@ pmid = []
 doi = []
 uep = xml_root.find('.//data_origins')  # uep = unique entry point
 for elm in uep.findall('data_origin'):
-    doi.append(elm.find('.//DOI').text)
-    pmid.append(elm.find('.//PMID').text)
+#    doi.append(elm.find('.//DOI').text)
+    doi_ptr = elm.find('.//DOI')
+    if (doi_ptr == None):
+      doi_value = ""
+    else:
+      doi_value = doi_ptr.text
+    doi.append(doi_value)
+
+#    pmid.append(elm.find('.//PMID').text)
+    pmid_ptr = elm.find('.//PMID')
+    if (pmid_ptr == None):
+      pmid_value = ""
+    else:
+      pmid_value = pmid_ptr.text
+    pmid.append(pmid_value)
 
 uep = xml_root.find('.//metadata')
 for elm in uep.findall('data_analysis'):
 #    print(' "' + el.find('.//PMID').text + '"', end='')
-  doi.append(elm.find('.//DOI').text)
-  pmid.append(elm.find('.//PMID').text)
+#  doi.append(elm.find('.//DOI').text)
+#  pmid.append(elm.find('.//PMID').text)
+  doi_ptr = elm.find('.//DOI')
+  if (doi_ptr == None):
+    doi_value = ""
+  else:
+    doi_value = doi_ptr.text
+  doi.append(doi_value)
+
+#    pmid.append(elm.find('.//PMID').text)
+  pmid_ptr = elm.find('.//PMID')
+  if (pmid_ptr == None):
+    pmid_value = ""
+  else:
+    pmid_value = pmid_ptr.text
+  pmid.append(pmid_value)
 
 sep_char_sq = sep_char + '"'   # tab + single quote
 
@@ -195,7 +222,11 @@ comment_str = 'Study Protocol Parameters Name\t"'
 uep = xml_root.find('.//variables')
 if (uep):
   for elm in uep.findall('variable'):
-    comment_str += elm.attrib['name'] + '.' + elm.attrib['type'] + '; '
+    if ('type' in elm.attrib.keys()):  # TODO: what's desired format if 'type' is missing?
+      comment_str += elm.attrib['name'] + '.' + elm.attrib['type'] + '; '
+    else:
+      comment_str += elm.attrib['name'] + '; '
+#      comment_str += '; '
 #  print(comment_str)
   fp.write(comment_str[:-2] + '"\n')
 
@@ -226,11 +257,46 @@ fp.write('Comment[creator_orcid-id_given-names]\t"' + xml_root.find(".//creator"
 fp.write('Comment[creator_orcid-id_email]\t"' + xml_root.find(".//creator").find(".//email").text + '"\n')
 fp.write('Comment[creator_orcid-id_organization-name]\t"' +  xml_root.find(".//creator").find(".//organization-name").text + 
             ', ' + xml_root.find(".//creator").find(".//department-name").text + '"\n') 
-fp.write('Comment[curator_orcid-id_family-name]\t"' + xml_root.find(".//curator").find(".//family-name").text + '"\n') 
-fp.write('Comment[curator_orcid-id_given-names]\t"' + xml_root.find(".//curator").find(".//given-names").text + '"\n')
-fp.write('Comment[curator_orcid-id_email]\t"' + xml_root.find(".//curator").find(".//email").text + '"\n')
-fp.write('Comment[curator_orcid-id_organization-name]\t"' +  xml_root.find(".//curator").find(".//organization-name").text + 
-            ', ' + xml_root.find(".//creator").find(".//department-name").text + '"\n') 
+
+
+#curator_ptr = xml_root.find(".//curator").find(".//family-name").text + '"\n') 
+family_name = ""
+given_names = ""
+email = ""
+org = ""
+dept = ""
+
+curator_ptr = xml_root.find(".//curator")
+if (curator_ptr):
+  family_name_ptr = curator_ptr.find(".//family-name")
+  given_names_ptr = curator_ptr.find(".//given-names")
+  email_ptr = curator_ptr.find(".//email")
+  org_ptr = curator_ptr.find(".//organization-name")
+  dept_ptr = curator_ptr.find(".//department-name")
+
+  if (family_name_ptr):
+    family_name = family_name_ptr.find(".//family-name").text 
+  if (given_names_ptr):
+    given_names = given_names_ptr.find(".//given-names").text 
+  if (email_ptr):
+    email = email_ptr.find(".//email").text 
+  if (org_ptr):
+    org = org_ptr.find(".//organization-name").text 
+  if (dept_ptr):
+    dept = dept_ptr.find(".//department-name").text 
+
+#fp.write('Comment[curator_orcid-id_family-name]\t"' + xml_root.find(".//curator").find(".//family-name").text + '"\n') 
+fp.write('Comment[curator_orcid-id_family-name]\t"' + family_name + '"\n') 
+
+#fp.write('Comment[curator_orcid-id_given-names]\t"' + xml_root.find(".//curator").find(".//given-names").text + '"\n')
+fp.write('Comment[curator_orcid-id_given-names]\t"' + given_names + '"\n')
+
+#fp.write('Comment[curator_orcid-id_email]\t"' + xml_root.find(".//curator").find(".//email").text + '"\n')
+fp.write('Comment[curator_orcid-id_email]\t"' + email + '"\n')
+
+fp.write('Comment[curator_orcid-id_organization-name]\t"' +  org + ', ' +  dept + '"\n') 
+
+
 fp.write('Comment[last_modified_by_orcid-id_family-name]\t"' + xml_root.find(".//last_modified_by").find(".//family-name").text + '"\n')
 fp.write('Comment[last_modified_by_orcid-id_given-names]\t"' + xml_root.find(".//last_modified_by").find(".//given-names").text + '"\n')
 fp.write('Comment[last_modified_by_orcid-id_email]\t"' + xml_root.find(".//last_modified_by").find(".//email").text + '"\n')
@@ -252,7 +318,8 @@ uep = xml_root.find('.//data_origins')  # uep = unique entry point
 for elm in uep.findall('data_origin'):
   for elm2 in elm.findall('citation'):
     fp.write('Comment[citation]' + sep_char)
-    pmid_origin = elm.find('.//PMID').text
+    # TODO: why did I insert the following line?
+    # pmid_origin = elm.find('.//PMID').text
 
 uep = xml_root.find('.//metadata')
 for elm in uep.findall('data_analysis'):
@@ -261,9 +328,10 @@ for elm in uep.findall('data_analysis'):
 
 uep = xml_root.find('.//cell_origin')
 cell_origin_characteristics = []
-for elm in uep.getchildren():
-  fp.write('Characteristics[' + elm.tag + ']' + sep_char)
-  cell_origin_characteristics.append(elm.text)
+if (uep):
+  for elm in uep.getchildren():
+    fp.write('Characteristics[' + elm.tag + ']' + sep_char)
+    cell_origin_characteristics.append(elm.text)
 
 fp.write('Factor Value[phenotype_dataset]' + sep_char + 'Sample Name\n')
 
@@ -303,7 +371,13 @@ uep = xml_root.find('.//variables')  # TODO: also req: keywords="viable"?
 if (uep):
   num_vars = 0
   for elm in uep.findall('variable'):
-    pval_str = elm.attrib['name'] + '.' + elm.attrib['type']
+
+    if ('type' in elm.attrib.keys()):  # TODO: what's desired format if 'type' is missing?
+      pval_str = elm.attrib['name'] + '.' + elm.attrib['type']
+    else:
+      pval_str = elm.attrib['name'] 
+
+#    pval_str = elm.attrib['name'] + '.' + elm.attrib['type']
     fp.write('Parameter Value[' + pval_str + '] ' + sep_char + 'Unit' + sep_char)
     num_vars += 1
 fp.write('Data File\n')
@@ -324,7 +398,13 @@ for elm in uep.findall('phenotype_dataset'):
       nvar += 1
   #    print(v.attrib['units'])
   #    print(v.find('.//material_amount').text)
-      comment_str += sep_char + v.find('.//material_amount').text + sep_char + v.attrib['units']
+
+      if ('units' in v.attrib.keys()):  # TODO: what's desired format if missing?
+        comment_str += sep_char + v.find('.//material_amount').text + sep_char + v.attrib['units']
+      else:
+        comment_str += sep_char + v.find('.//material_amount').text + sep_char + ""
+
+#      comment_str += sep_char + v.find('.//material_amount').text + sep_char + v.attrib['units']
   #  print(comment_str)
   #  print('nvar=',nvar)
     fp.write(comment_str)

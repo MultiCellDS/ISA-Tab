@@ -1,0 +1,184 @@
+<MultiCellDS version="1.0.0" type="cell_line">
+	<cell_line label="Eu-myc/Arf-/-" ID="0">
+		<metadata>
+			<MultiCellDB>
+				<ID>MCDS_L_0000000047</ID>
+				<name>arf_null</name>
+			</MultiCellDB>
+			<description>
+				Digital cell line for Eu-myc/Arf-/- cells, generated from Frieboes et al.. These are Lymphoma drug-sensitive cells.
+			</description>
+			<citation>
+				<text>
+					If this digital cell line is used in a publication, cite it as:
+					"We used digital cell line arf_null [1] version 1 (MultiCellDB_ID: MCDS_L_0000000047), created with data and contributions from [2]
+					[1] S. H. Friedman et al., MultiCellDS: a standard and a community for sharing multicellular data (2016, submitted)
+					[2] Frieboes HB, Smith BR, Wang Z, Kotsuma M, Ito K, Day A, et al. (2015) Predictive Modeling of Drug Response in Non-Hodgkin's Lymphoma. PLoS ONE 10(6): e0129433. doi:10.1371/journal.pone.0129433
+				</text>			
+				<URL>http://MathCancer.org</URL>
+				<notes>S. H. Friedman et al., MultiCellDS: a standard and a community for sharing multicellular data (2016, submitted)</notes>
+			</citation>
+			<curation curated="true">  
+				<created>2015-07-28T12:00:00-07:00</created>
+				<last_modified>2016-11-29T11:00:00-08:00</last_modified>
+				<classification>
+					<classification_number>43.0.0.1</classification_number>
+					<line>43</line>
+					<variant>0</variant>
+					<branch>0</branch>
+					<version>1</version>
+				</classification>
+				<creator>
+					<orcid-identifier>
+						<path>0000-0003-1062-3642</path>
+						<given-names>Edwin Fracisco</given-names>		
+						<family-name>Juarez Rosales</family-name>
+						<email>juarezro@usc.edu</email>
+						<url>MathCancer.org</url>
+						<organization-name>University of Southern California</organization-name>
+						<department-name>Electrical Engineering</department-name>
+					</orcid-identifier>
+					<orcid-identifier>
+						<path>0000-0001-8003-6860</path>
+						<given-names>Samuel H.</given-names>               
+						<family-name>Friedman</family-name>
+						<email>samuelf@usc.edu</email>
+						<url>http://MathCancer.org</url>
+						<organization-name>University of Southern California</organization-name>
+						<department-name>Center for Applied Molecular Medicine</department-name>
+					</orcid-identifier>
+					<orcid-identifier>
+						<path>0000-0001-5959-4286</path>
+						<given-names>Hermann B.</given-names>		
+						<family-name>Frieboes</family-name>
+						<email>hbfrie01@louisville.edu</email>
+						<url>N/A</url>
+						<organization-name>University of Louisville</organization-name>
+						<department-name>Bioengineering</department-name>
+					</orcid-identifier>					
+				</creator>
+				<current_contact>  
+					<orcid-identifier>
+						<path>0000-0001-5959-4286</path>
+						<given-names>Hermann B.</given-names>		
+						<family-name>Frieboes</family-name>
+						<email>hbfrie01@louisville.edu</email>
+						<url>N/A</url>
+						<organization-name>University of Louisville</organization-name>
+						<department-name>Bioengineering</department-name>
+					</orcid-identifier>
+				</current_contact>
+				<curator>  
+					<orcid-identifier>
+						<path>0000-0001-5959-4286</path>
+						<given-names>Hermann B.</given-names>		
+						<family-name>Frieboes</family-name>
+						<email>hbfrie01@louisville.edu</email>
+						<url>N/A</url>
+						<organization-name>University of Louisville</organization-name>
+						<department-name>Bioengineering</department-name>
+					</orcid-identifier>
+				</curator>
+				<last_modified_by>
+					<orcid-identifier>
+        				<path>0000-0001-8003-6860</path>
+        				<given-names>Samuel H.</given-names>               
+        				<family-name>Friedman</family-name>
+        				<email>samuelf@usc.edu</email>
+        				<url>http://MathCancer.org</url>
+        				<organization-name>University of Southern California</organization-name>
+        				<department-name>Center for Applied Molecular Medicine</department-name>
+    				</orcid-identifier>
+				</last_modified_by>
+			</curation>
+			<data_origins> 
+				<data_origin>
+					<citation>
+						<URL>http://www.ncbi.nlm.nih.gov/pubmed/26061425</URL>
+					</citation>
+					<xpath>
+						//phenotype/cell_cycle/cell_cycle_phase/duration
+						//phenotype/cell_cycle/cell_cycle_phase/birth_rate
+						//phenotype/cell_death/duration
+						//phenotype/PKPD/pharmacodynamics/therapy_measurement_set/therapy/drug/dose
+						//phenotype/PKPD/pharmacodynamics/therapy_measurement_set/response/custom/IC_50
+						//phenotype/geometrical_properties/lengths/radius
+					</xpath>
+				</data_origin>
+				<data_origin>
+					<citation>
+						<URL>http://www.drugbank.ca/drugs/DB00997</URL>
+					</citation>
+					<xpath>
+						//phenotype/PKPD/Drug/Pharmacokinetics/half_life
+					</xpath>
+				</data_origin>
+			</data_origins>
+			<data_analysis> 
+				<URL>http://www.ncbi.nlm.nih.gov/pubmed/26061425</URL>
+				<citation>
+					<text>Frieboes HB, Smith BR, Wang Z, Kotsuma M, Ito K, Day A, et al. (2015) Predictive Modeling of Drug Response in Non-Hodgkin's Lymphoma. PLoS ONE 10(6): e0129433. doi:10.1371/journal.pone.0129433
+					</text>
+				</citation>
+			</data_analysis>
+			<rights>
+    			<license>
+        			<LicenseDocument>
+            			<name>CC-BY 4.0</name>
+            			<URL>https://creativecommons.org/licenses/by/4.0/</URL>
+        			</LicenseDocument>
+    			</license>
+			</rights>
+			<cell_origin>
+				<BTO_ID>0002904</BTO_ID>
+				<species>mouse</species>
+				<organ>lymphoma</organ>
+				<disease>Non-Hodgins' Lymphoma</disease>
+				<morphology>Drug-sensitive tumorgenic</morphology>
+			</cell_origin>
+		</metadata>	
+		<phenotype_dataset ID="0" keywords="normoxic">
+			<microenvironment>
+				<domain>
+					<variables>
+						<variable type="concentration" ChEBI_ID="15379" name="oxygen" units="mmHg">
+							<material_amount measurement_type="estimated">160</material_amount> 
+						</variable>
+					</variables>
+				</domain>
+			</microenvironment>
+			<phenotype type="expected">	
+				<cell_cycle model="total_cells" ID="0"> 
+					<cell_cycle_phase name="growth_phase" ID="0">
+						<duration units="hour" measurement_type="estimated">24</duration>
+					</cell_cycle_phase>
+				</cell_cycle>
+				<cell_death type="apoptosis">
+					<duration units="hour" measurement_type="estimated">5</duration> 
+				</cell_death>
+				<geometrical_properties>
+					<lengths>
+						<radius measurement_type="inferred" units="micron" min="3" max="5" range="3 5">4</radius>
+					</lengths>
+				</geometrical_properties>
+				<PKPD>
+					<drug ID="0" name="Doxorubicin " ChEBI_ID="28748" MeSH_ID="D004317" DrugBank_ID="DB00997"/>					
+					<pharmacodynamics>
+						<therapy_measurement_set ID="0">
+							<therapy>
+								<drug ID="0">
+									<dose units="nM" type="bolus">46.2</dose>
+								</drug>
+							</therapy>
+							<response>
+								<custom>
+									<IC_50 units="hour" measurement_type="direct">48</IC_50>
+								</custom>
+							</response>
+						</therapy_measurement_set>
+					</pharmacodynamics>
+				</PKPD>
+			</phenotype>
+		</phenotype_dataset>
+	</cell_line>
+</MultiCellDS>

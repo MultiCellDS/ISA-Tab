@@ -1,0 +1,137 @@
+<?xml version="1.0" ?>
+<MultiCellDS type="cell_line" version="1.0.0">
+	<cell_line ID="0" label="A_375">
+		<metadata>
+			<MultiCellDB>
+				<ID>MCDS_L_0000000007</ID>
+				<name>A-375</name>
+			</MultiCellDB>
+			<description>
+				Digital cell line for A_375 cells, generated from data provided by Edwin Francisco Juarez Rosales on 2016-06-24. These are Malignant Melanoma.
+			</description>
+			<citation>
+				<text>
+					If this digital cell line is used in a publication, cite it as:
+					'We used digital cell line A_375 [1] version 1 (MultiCellDB_ID: MCDS_L_0000000007) created with data and contributions from [2]'
+					[1] S. H. Friedman et al., MultiCellDS: a standard and a community for sharing multicellular data (2016, submitted)
+					[2] Juarez, E. F. et al. Quantifying differences in cell line population dynamics using CellPD. BMC Systems Biology 10, 92, doi:10.1186/s12918-016-0337-5 (2016).
+				</text>
+				<URL>http://physics.cancer.gov/docs/bioresource/skin/NCI-PBCF-CRL1619_A-375_SOP-508.pdf</URL>
+			</citation>
+			<curation curated="false">
+				<created>2016-06-24T23:30:53.03462Z</created>
+				<last_modified>2016-11-29T19:07:13.225245Z</last_modified>
+				<classification>
+					<classification_number>3.0.0.1</classification_number>
+					<line>3</line>
+					<variant>0</variant>
+					<branch>0</branch>
+					<version>1</version>
+				</classification>
+				<creator>
+					<orcid-identifier>
+						<path>0000-0003-1062-3642</path>
+						<given-names>Edwin Francisco</given-names>
+						<family-name>Juarez Rosales</family-name>
+						<email>juarezro@usc.edu</email>
+						<url>MathCancer.org</url>
+						<organization-name>University of Southern California</organization-name>
+						<department-name>Electrical Engineering</department-name>
+					</orcid-identifier>
+				</creator>
+				<current_contact>
+					<orcid-identifier>
+						<path>0000-0003-1062-3642</path>
+						<given-names>Edwin Francisco</given-names>
+						<family-name>Juarez Rosales</family-name>
+						<email>juarezro@usc.edu</email>
+						<url>MathCancer.org</url>
+						<organization-name>University of Southern California</organization-name>
+						<department-name>Electrical Engineering</department-name>
+					</orcid-identifier>
+				</current_contact>
+				<curator>
+					<orcid-identifier>
+						<path>0000-0003-1062-3642</path>
+						<given-names>Edwin</given-names>
+						<family-name>Juarez</family-name>
+						<email>juarezro@usc.edu</email>
+						<url>http://MathCancer.org</url>
+						<organization-name>University of Southern California</organization-name>
+						<department-name>Center for Applied Molecular Medicine</department-name>
+					</orcid-identifier>
+				</curator>
+				<last_modified_by>
+					<orcid-identifier>
+						<path>0000-0001-8003-6860</path>
+						<given-names>Samuel H.</given-names>
+						<family-name>Friedman</family-name>
+						<email>samuelf@usc.edu</email>
+						<url>http://MathCancer.org</url>
+						<organization-name>University of Southern California</organization-name>
+						<department-name>Center for Applied Molecular Medicine</department-name>
+					</orcid-identifier>
+				</last_modified_by>
+			</curation>
+			<data_origins>
+				<data_origin>
+					<citation>
+						<URL>http://physics.cancer.gov/docs/bioresource/skin/NCI-PBCF-CRL1619_A-375_SOP-508.pdf</URL>
+					</citation>
+				</data_origin>
+			</data_origins>
+			<data_analysis>
+				<URL>http://MathCancer.org</URL>
+				<notes>cell_line/phenotype_dataset/phenotype/cell_cycle/cell_cycle_phase/duration does not have associated uncertainty measures because it is a derived quantity from the corresponding rate.</notes>
+			</data_analysis>
+			<rights>
+				<license>
+					<LicenseDocument>
+						<name>CC-BY 4.0</name>
+						<URL>https://creativecommons.org/licenses/by/4.0/</URL>
+					</LicenseDocument>
+				</license>
+			</rights>
+			<cell_origin>
+				<BTO_ID>0002806
+</BTO_ID>
+				<CLO_ID>0001582</CLO_ID>
+				<species>Homo Sapiens</species>
+				<organ>Skin</organ>
+				<disease>Malignant Melanoma - Mesenchyme</disease>
+				<morphology>Epithelial-like</morphology>
+			</cell_origin>
+			<notes>
+				
+			</notes>
+		</metadata>
+		<phenotype_dataset ID="0" keywords="Normoxia">
+			<microenvironment>
+				<domain>
+					<variables>
+						<variable ChEBI_ID="15379" name="oxygen" type="concentration" units="mmHg">
+							<material_amount measurement_type="Estimated">0.2</material_amount>
+						</variable>
+					</variables>
+				</domain>
+			</microenvironment>
+			<phenotype type="expected">
+				<cell_cycle ID="0" model="total">
+					<cell_cycle_phase ID="0" name="growth_phase">
+						<duration measurement_type="inferred" units="hours">57.6</duration>
+						<net_birth_rate measurement_type="inferred" standard_error_of_the_mean="0.00487" units="1/hours">0.0174</net_birth_rate>
+					</cell_cycle_phase>
+				</cell_cycle>
+				<cell_cycle ID="1" model="total_logistic">
+					<cell_cycle_phase ID="0" name="growth_phase">
+						<duration measurement_type="inferred" units="hours">14.3</duration>
+						<net_birth_rate measurement_type="inferred" standard_error_of_the_mean="0.00685" units="1/hours">0.0698</net_birth_rate>
+						<cell_cycle_arrest>
+							<condition measurement_type="inferred" standard_error_of_the_mean="17000.0" type="maximum_cell_density" units="number of cells">674000.0</condition>
+						</cell_cycle_arrest>
+					</cell_cycle_phase>
+				</cell_cycle>
+			</phenotype>
+		</phenotype_dataset>
+	</cell_line>
+</MultiCellDS>

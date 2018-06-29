@@ -1,0 +1,40 @@
+Sample Name	Protocol REF	Parameter Value[oxygen.concentration] 	Unit	Parameter Value[CO2.concentration] 	Unit	Data File
+MCDS_L_0000000043.0.0	microenvironment.measurement	
+							160 
+								mmHg	
+							38
+								mmHg	HUVEC_v4_SHF_test.xml
+MCDS_L_0000000043.0.1	microenvironment.measurement	
+								160 
+								mmHg	
+								62
+								1/micron^3	
+								0.5
+								ng / mL	
+								0.5
+								ng / mLHUVEC_v4_SHF_test.xml
+MCDS_L_0000000043.0.2	microenvironment.measurement	
+								160 
+								mmHg	
+								62
+								1/micron^3	
+								0.5
+								ng / mL	
+								0.5
+								ng / mLHUVEC_v4_SHF_test.xml
+MCDS_L_0000000043.0.3	microenvironment.measurement	
+								160 
+								mmHg	
+								62
+								1/micron^3	
+								5
+								ng / mL	HUVEC_v4_SHF_test.xml
+MCDS_L_0000000043.0.4	microenvironment.measurement	
+								160 
+								mmHg	
+								0.2
+									
+								0.5
+								ng / mL	
+								5
+								ng / mLHUVEC_v4_SHF_test.xml

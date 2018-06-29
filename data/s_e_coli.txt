@@ -1,0 +1,2 @@
+Source Name	Comment[citation]	Characteristics[species]	Characteristics[strain]	Factor Value[phenotype_dataset]	Sample Name
+MCDS_L_0000000045.0	PMID: 	Escherichia coli	NCTC 9001	normal	MCDS_L_0000000045.0.0

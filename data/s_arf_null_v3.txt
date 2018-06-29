@@ -1,0 +1,2 @@
+Source Name	Comment[citation]	Comment[citation]	Comment[citation]	Characteristics[BTO_ID]	Characteristics[species]	Characteristics[organ]	Characteristics[disease]	Characteristics[morphology]	Factor Value[phenotype_dataset]	Sample Name
+MCDS_L_0000000047.0	PMID: 	PMID: 	PMID: 	0002904	mouse	lymphoma	Non-Hodgins' Lymphoma	Drug-sensitive tumorgenic	normoxic	MCDS_L_0000000047.0.0

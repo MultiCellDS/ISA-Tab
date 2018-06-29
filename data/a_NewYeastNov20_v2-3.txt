@@ -1,0 +1,19 @@
+Sample Name	Protocol REF	Parameter Value[yeast extract.concentration] 	Unit	Parameter Value[peptone.concentration] 	Unit	Parameter Value[dextrose.concentration] 	Unit	Parameter Value[agar.concentration] 	Unit	Data File
+MCDS_L_0000000044.0.0	microenvironment.measurement	
+							10
+								g/L	
+							20
+								g/L	
+							20
+								g/L	
+							20
+								g/L	NewYeastNov20_v2-3.xml
+MCDS_L_0000000044.0.1	microenvironment.measurement	
+								10
+								g/L	
+								20
+								g/L	
+								20
+								g/L	
+								20
+								g/L	NewYeastNov20_v2-3.xml

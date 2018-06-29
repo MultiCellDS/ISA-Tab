@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MultiCellDS type="cell_line" version="1.0.0">
+	<cell_line ID="0" label="GBM_1">
+		<metadata>
+			<MultiCellDB>
+				<ID>MCDS_L_0000000066</ID>
+				<name>GBM_1</name>
+			</MultiCellDB>
+			<description>This is a digital cell line for Glioblastoma based on information inferred from MRI data and a patient-specific mathematical model. This is for patient ID: 1.</description>
+			<citation>
+				<text>If this digital cell line is used in a publication, cite it as:
+					'We used digital cell line GBM_1 [1] version 1 (MultiCellDB_ID: MCDS_L_0000000066) created with data and contributions from [2]'
+					[1] S. H. Friedman et al., MultiCellDS: a standard and a community for sharing multicellular data (2016, submitted)
+					[2] Baldock AL, Yagle K, Born DE, Ahn S, Trister AD, Neal M, et al. Invasion and proliferation kinetics in enhancing gliomas predict IDH1 mutation status. Neuro Oncol. 2014 Jun;14(6):779-86. DOI: 10.1093/neuonc/nou027</text>
+			</citation>
+			<curation curated="true">
+				<created>2015-09-01T23:11:00Z</created>
+				<last_modified>2016-11-29T19:09:42.301482Z</last_modified>
+				<classification>
+					<classification_number>62.0.0.1</classification_number>
+					<line>62</line>
+					<variant>0</variant>
+					<branch>0</branch>
+					<version>1</version>
+				</classification>
+				<creator>
+					<orcid-identifier>
+						<path>0000-0002-1557-159X</path>
+						<given-names>Russell</given-names>
+						<family-name>Rockne</family-name>
+						<email>rrockne@coh.org</email>
+						<organization-name>City of Hope</organization-name>
+						<department-name>Information Sciences, Division of Mathematical Oncology</department-name>
+					</orcid-identifier>
+					<orcid-identifier>
+						<path>0000-0002-2464-6119</path>
+						<given-names>Kristin R.</given-names>
+						<family-name>Swanson</family-name>
+						<email>swanson.kristin@mayo.edu</email>
+						<url>http://mathematicalneurooncology.org/</url>
+						<organization-name>Mayo Clinic</organization-name>
+						<department-name>Neurological Surgery</department-name>
+					</orcid-identifier>
+					<orcid-identifier>
+						<given-names>Anne</given-names>
+						<family-name>Baldock</family-name>
+						<organization-name>Northwestern University</organization-name>
+						<department-name>Neurological Surgery</department-name>
+					</orcid-identifier>
+					<orcid-identifier>
+						<path>0000-0003-1062-3642</path>
+						<given-names>Edwin Fracisco</given-names>
+						<family-name>Juarez Rosales</family-name>
+						<email>juarezro@usc.edu</email>
+						<url>MathCancer.org</url>
+						<organization-name>University of Southern California</organization-name>
+						<department-name>Electrical Engineering</department-name>
+					</orcid-identifier>
+				</creator>
+				<current_contact>
+					<orcid-identifier>
+						<path>0000-0002-1557-159X</path>
+						<given-names>Russell</given-names>
+						<family-name>Rockne</family-name>
+						<email>rrockne@coh.org</email>
+						<organization-name>City of Hope</organization-name>
+						<department-name>Information Sciences, Division of Mathematical Oncology</department-name>
+					</orcid-identifier>
+				</current_contact>
+				<curator>
+					<orcid-identifier>
+						<path>0000-0002-1557-159X</path>
+						<given-names>Russell</given-names>
+						<family-name>Rockne</family-name>
+						<email>rrockne@coh.org</email>
+						<organization-name>City of Hope</organization-name>
+						<department-name>Information Sciences, Division of Mathematical Oncology</department-name>
+					</orcid-identifier>
+				</curator>
+				<last_modified_by>
+					<orcid-identifier>
+						<path>0000-0001-8003-6860</path>
+						<given-names>Samuel H.</given-names>
+						<family-name>Friedman</family-name>
+						<email>samuelf@usc.edu</email>
+						<url>http://MathCancer.org</url>
+						<organization-name>University of Southern California</organization-name>
+						<department-name>Center for Applied Molecular Medicine</department-name>
+					</orcid-identifier>
+				</last_modified_by>
+			</curation>
+			<data_origins>
+				<data_origin>
+					<citation>
+						<DOI>10.1093/neuonc/nou027</DOI>
+						<URL>http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4022227/</URL>
+						<PMID>24832620</PMID>
+					</citation>
+				</data_origin>
+			</data_origins>
+			<rights>
+				<license>
+					<LicenseDocument>
+						<name>CC-BY 4.0</name>
+						<URL>https://creativecommons.org/licenses/by/4.0/</URL>
+					</LicenseDocument>
+				</license>
+			</rights>
+			<cell_origin>
+				<species>Homo sapiens</species>
+				<organ>Brain</organ>
+				<disease>Glioblastoma Multiforme</disease>
+				<patient_derived patient_ID="1">true</patient_derived>
+			</cell_origin>
+			<custom>
+				<clinical>
+					<diagnosis>
+						<alive_patient>1</alive_patient>
+						<pathology>
+							<pathology_definitions>
+								<stain ID="0" name="Ki67">
+									<target>MIB-1</target>
+									<source>Dako</source>
+									<nuclear_stain>true</nuclear_stain>
+									<cytoplasmic_stain>false</cytoplasmic_stain>
+									<membrane_stain>false</membrane_stain>
+								</stain>
+								<stain ID="1" name="IDH-1mut">
+									<target>IDH1 amino acids 125–137 with histidine at position 132</target>
+									<source>DIA-H09, Dianova GmbH</source>
+									<nuclear_stain>true</nuclear_stain>
+									<cytoplasmic_stain>true</cytoplasmic_stain>
+									<membrane_stain>false</membrane_stain>
+								</stain>
+							</pathology_definitions>
+							<pathology_grade>4</pathology_grade>
+							<pathology_type>Glioblastoma Multiforme</pathology_type>
+							<stain ID="0" name="Ki67">
+								<positive_fraction measurement_type="direct" units="dimensionless">0.06</positive_fraction>
+							</stain>
+							<stain ID="1" name="IDH-1mut">
+								<positive_fraction measurement_type="direct" units="dimensionless">1.0</positive_fraction>
+							</stain>
+						</pathology>
+						<clinical_correlates>
+							<d_over_rho measurement_type="estimated" units="mm^2">5.5477</d_over_rho>
+							<rho_over_d max="0.24722" measurement_type="estimated" min="0.18045" std="0.026945" units="1/mm^2">0.18025</rho_over_d>
+							<overall_survival measurement_type="observed" units="day">465</overall_survival>
+							<age_at_diagnosis measurement_type="observed" units="year">25</age_at_diagnosis>
+						</clinical_correlates>
+					</diagnosis>
+				</clinical>
+			</custom>
+		</metadata>
+		<phenotype_dataset ID="0" keywords="clinical,patient,MRI">
+			<phenotype type="expected">
+				<cell_cycle ID="0" model="total">
+					<cell_cycle_phase ID="0" name="total">
+						<net_birth_rate measurement_type="inferred" units="1/year">25.994</net_birth_rate>
+						<cell_cycle_arrest>
+							<condition measurement_type="estimated" type="maximum_cell_density" units="cells/mm^3">250000.0</condition>
+						</cell_cycle_arrest>
+					</cell_cycle_phase>
+					<custom>
+						<velocity units="mm/year">122.45</velocity>
+					</custom>
+				</cell_cycle>
+				<motility>
+					<unrestricted ID="0">
+						<timescale measurement_type="inferred" units="days">4.0</timescale>
+						<diffusion_coefficient measurement_type="inferred" units="mm^2 / year">144.21</diffusion_coefficient>
+					</unrestricted>
+				</motility>
+			</phenotype>
+		</phenotype_dataset>
+	</cell_line>
+</MultiCellDS>

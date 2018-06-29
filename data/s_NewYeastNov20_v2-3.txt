@@ -1,0 +1,5 @@
+Source Name	Comment[citation]	Comment[citation]	Comment[citation]	Comment[citation]	Characteristics[species]	Characteristics[strain]	Characteristics[custom]	Factor Value[phenotype_dataset]	Sample Name
+MCDS_L_0000000044.0	PMID: 11530603	PMID: 19262693	PMID: 16293764	PMID: 21485033	PMID: 	Saccharomyces cerevisiae	S288C	
+                		Daughter_YPD	MCDS_L_0000000044.0.0
+MCDS_L_0000000044.0	PMID: 11530603	PMID: 19262693	PMID: 16293764	PMID: 21485033	PMID: 	Saccharomyces cerevisiae	S288C	
+                		Mother_YPD	MCDS_L_0000000044.0.1

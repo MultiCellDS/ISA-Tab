@@ -1,0 +1,477 @@
+<MultiCellDS version="1.0.0" type="cell_line">
+	<cell_line label="Scerevisiae-1" ID="0">
+		<metadata>
+			<MultiCellDB>
+				<ID>MCDS_L_0000000044</ID>
+				<name>Scerevisiae-1</name>
+			</MultiCellDB>
+			<description>
+				This is a template digital cell line for the budding yeast Saccharomyces cerevisiae cells, generated from some experimentally observed settings (see below for sources).
+				These observations are for the reference yeast cell line (S288C).
+				http://www.atcc.org/Products/All/204508.aspx
+			</description>
+			<citation>
+				<text>
+					If this digital cell line is used in a publication, cite it as:
+					"We used digital cell line Scerevisiae-1 [1] version 1.0 (MultiCellDB_ID: MCDS_L_0000000044), created with data and contributions from [2-5]."
+					[1] S. H. Friedman et al., MultiCellDS: a standard and a community for sharing multicellular data (2016, submitted)
+					[2] Saghbini M., Hoekstra D. and Gautsch J. Media formulations for various two-hybrid systems. In Two-Hybrid Systems, pp. 15-39. Humana Press, (2001).
+					[3] Byrne, Lee J., et al. "The number and transmission of [PSI] prion seeds (Propagons) in the yeast Saccharomyces cerevisiae." PLoS One 4.3 (2009): e4670-e4670.
+					[4] Kaeberlein Matt., et al. Regulation of yeast replicative life span by TOR and Sch9 in response to nutrients. Science 310.5751 (2005) 1193-1196
+					[5] Stenson, John D., et al. Determining the mechanical properties of yeast cell walls. Biotechnology progress 27.2 (2011).
+				</text>
+				<URL>http://MathCancer.org</URL>
+				<notes>S. H. Friedman et al., MultiCellDS: a standard and a community for sharing multicellular data (2016, submitted)</notes>
+			</citation>
+			<curation curated="true">  
+				<created>2015-05-14T16:11:00-07:00</created>
+				<last_modified>2016-11-29T11:00:00-08:00</last_modified>
+				<classification>
+					<classification_number>40.0.0.1</classification_number>
+					<line>40</line>
+					<variant>0</variant>
+					<branch>0</branch>
+					<version>1</version>
+				</classification>
+				<creator>
+					<orcid-identifier>
+						<path>0000-0003-2742-4332</path>
+						<given-names>Suzanne</given-names>
+						<family-name>Sindi</family-name>
+						<email>ssindi@ucmerced.edu</email>
+						<url>http://faculty.ucmerced.edu/ssindi/</url>
+						<organization-name>University of California, Merced</organization-name>
+						<department-name>Applied Mathematics, School of Natural Sciences</department-name>
+					</orcid-identifier>
+				</creator>
+				<current_contact>  
+					<orcid-identifier>
+						<path>0000-0003-2742-4332</path>
+						<given-names>Suzanne</given-names>
+						<family-name>Sindi</family-name>
+						<email>ssindi@ucmerced.edu</email>
+						<url>http://faculty.ucmerced.edu/ssindi</url>
+						<organization-name>University of California, Merced</organization-name>
+						<department-name>Applied Mathematics, School of Natural Sciences</department-name>
+					</orcid-identifier>
+				</current_contact>
+				<curator>
+					<orcid-identifier>
+						<path>0000-0003-2742-4332</path>
+						<given-names>Suzanne</given-names>
+						<family-name>Sindi</family-name>
+						<email>ssindi@ucmerced.edu</email>
+						<url>http://faculty.ucmerced.edu/ssindi/</url>
+						<organization-name>University of California, Merced</organization-name>
+						<department-name>Applied Mathematics, School of Natural Sciences</department-name>
+					</orcid-identifier>
+				</curator>
+				<last_modified_by>
+					<orcid-identifier>
+        				<path>0000-0001-8003-6860</path>
+        				<given-names>Samuel H.</given-names>               
+        				<family-name>Friedman</family-name>
+        				<email>samuelf@usc.edu</email>
+        				<url>http://MathCancer.org</url>
+        				<organization-name>University of Southern California</organization-name>
+        				<department-name>Center for Applied Molecular Medicine</department-name>
+    				</orcid-identifier>
+				</last_modified_by>
+			</curation>
+			<data_origins>
+                <data_origin>
+					<citation>
+						<text>Saghbini M., Hoekstra D. and Gautsch J. Media formulations for various two-hybrid systems. In Two-Hybrid Systems, pp. 15-39. Humana Press, (2001).
+                        </text>
+						<PMID>11530603</PMID>
+					</citation>
+                	<xpath>
+                		//microenvironment
+                	</xpath>
+				</data_origin>
+				<data_origin>
+					<citation>
+						<text>Byrne, Lee J., et al. "The number and transmission of [PSI] prion seeds (Propagons) in the yeast Saccharomyces cerevisiae." PLoS One 4.3 (2009): e4670-e4670.
+                        </text>
+						<PMID>19262693</PMID>
+					</citation>
+					<xpath>
+						//phenotype/cell_cycle/birth_rate
+						//phenotype/cell_cycle/duration
+						//phenotype/cell_cycle/death_rate
+						//phenotype/cell_death
+					</xpath>					
+				</data_origin>
+				<data_origin>
+					<citation>
+						<text>Kaeberlein Matt., et al. Regulation of yeast replicative life span by TOR and Sch9 in response to nutrients. Science 310.5751 (2005) 1193-1196
+                        </text>
+						<PMID>16293764</PMID>
+					</citation>
+					<xpath>
+						//phenotype/cell_cycle/death_rate
+						//phenotype/cell_death
+					</xpath>
+				</data_origin>				
+				<data_origin>
+					<citation>
+						<text>
+							Stenson, John D., et al. Determining the mechanical properties of yeast cell walls. Biotechnology progress 27.2 (2011).
+                            
+                            Additional documentation available in the following Thesis:
+                            http://etheses.bham.ac.uk/304/1/Stenson09PhD.pdf.
+						</text>
+						<PMID>21485033</PMID>
+					</citation>
+					<xpath>
+						//phenotype/mechanical/maximum_cell_deformation
+						//phenotype/mechanical/youngs_modulus
+						//phenotype/mechanical/poisson_ratio
+					</xpath>
+				</data_origin>
+			</data_origins>
+			<data_analysis>
+				<xpath>
+					//phenotype/cell_cycle/death_rate
+					//phenotype/cell_death
+				</xpath>
+				<custom>
+					<text>
+						Assumed that a yeast cell survives for 26 generation and determined the death_rate and
+						cell_death duration by determining the average time until 26 generations occurred.
+						
+						Thus, to determine properties related to cell death, references [3] and [4] were used.
+					</text>
+				</custom>
+			</data_analysis>
+			<rights>
+    			<license>
+        			<LicenseDocument>
+            			<name>CC-BY 4.0</name>
+            			<URL>https://creativecommons.org/licenses/by/4.0/</URL>
+        			</LicenseDocument>
+    			</license>
+			</rights>
+			<cell_origin>
+				<species>Saccharomyces cerevisiae</species>
+				<strain>S288C</strain>
+                <custom>
+                	<notes>
+                		The measurements reported are for strain S288C and its derivatives.
+                	</notes>
+                </custom>
+			</cell_origin>
+			<notes>
+				[1] Budding yeast divide asymmetrically into one cell that inherits the replicative age (mother) and one new cell (daughter). In this digital cell line they are distinguished as different phenotype data sets: ID="0" corresponds to daughter and ID="1" to mother.
+				
+				[2] Measurements and quantities reported (such as those for YPD) were chosen to be canonical representations. Subsequent releases will distinguish different kinds of media (liquid and solid) and make more explicit the relationship between media and reported measurements.
+				
+				[3] Greater documentation for the mechanical features derived in reference [5] Stenson et al. are provided in the following Thesis: http://etheses.bham.ac.uk/304/1/Stenson09PhD.pdf.
+				
+				[4] Various yeast geometric properties were determined from Bionumbers:
+					http://bionumbers.hms.harvard.edu
+				- Radius:        ID#103953
+				- Surface Area:  ID#103700
+				- Cell Volume:   ID#100450
+                
+                [5] Maximum Replicative Age of the mother is assumed to be 40 generations (cell divisions) [4] (Figure 1).
+            </notes>
+		</metadata>	
+		<phenotype_dataset ID="0" keywords="Daughter_YPD">
+			<microenvironment>
+				<domain>
+					<variables>
+						<variable type="concentration" GMO_ID="001003" name="yeast extract" units="g/L">
+							<material_amount measurement_type="estimated">
+							10
+							</material_amount>
+						</variable>
+						<variable type="concentration" MeSH_ID="D010461" GMO_ID="000012" name="peptone" units="g/L">
+							<material_amount measurement_type="estimated">
+							20
+							</material_amount>
+						</variable>
+						<variable type="concentration" GMO_ID="001010" name="dextrose" units="g/L">
+							<material_amount measurement_type="estimated">
+							20
+							</material_amount>
+						</variable>
+						<variable type="concentration" GMO_ID="001007" name="agar" units="g/L">
+							<material_amount measurement_type="estimated">
+							20
+							</material_amount>
+						</variable>
+					</variables>
+				</domain>
+			</microenvironment>			
+			<phenotype type="expected">	
+				<cell_cycle model="live_apoptotic" ID="0">
+					<cell_cycle_phase name="live" ID="0">
+						<birth_rate units="1/hours" measurement_type="inferred" standard_deviation="2.13166e-01">
+							7.0922e-01
+						</birth_rate>
+						<duration units="hour" measurement_type="inferred">
+							1.41
+						</duration>
+						<death_rate type="apoptosis" units="1/hour">
+							3.20924e-02
+						</death_rate>
+					</cell_cycle_phase>
+				</cell_cycle>
+				<cell_death type="apoptosis">
+					<duration units="hour" measurement_type="estimated">
+					31.16
+					</duration> 
+				</cell_death>
+				<geometrical_properties>
+					<lengths>
+						<radius units="micron" measurement_type="literature" range="2.04 3.12">
+							2.58
+						</radius>
+					</lengths>
+					<areas>
+						<total_surface_area units="micron^2" measurement_type="literature" range="124.4 143.4">
+							133.9
+						</total_surface_area>
+					</areas>
+					<volumes>
+						<total_volume units="micron^3" measurement_type="estimated">
+							42
+						</total_volume>
+					</volumes>
+				</geometrical_properties>
+				<mechanics>
+					<maximum_cell_deformation units="percent" measurement_type="estimated">
+						68
+					</maximum_cell_deformation>
+		
+					<poisson_ratio units="dimensionless" measurement_type="inferred">
+						0.5
+					</poisson_ratio>
+					<youngs_modulus units="MPa" measurement_type="estimated" range="170 200">
+						185
+					</youngs_modulus>
+				</mechanics>
+			</phenotype>
+
+			<cell_part name="cell wall">
+				<phenotype>	
+					<mechanics>
+						<youngs_modulus units="MPa" measurement_type="estimated">
+							185
+						</youngs_modulus>
+					</mechanics>
+				</phenotype>
+			</cell_part>
+			<custom>
+				<generation>
+					<minimum>
+                        0
+                    </minimum>
+                    <maximum>
+                        0
+                    </maximum>
+                </generation>
+			</custom>
+		</phenotype_dataset>
+		<phenotype_dataset ID="1" keywords="Mother_YPD">
+			<microenvironment>
+				<domain>
+					<variables>
+						<variable type="concentration" GMO_ID="001003" name="yeast extract" units="g/L">
+							<material_amount measurement_type="estimated">
+								10
+							</material_amount>
+						</variable>
+						<variable type="concentration" MeSH_ID="D010461" GMO_ID="000012" name="peptone" units="g/L">
+							<material_amount measurement_type="estimated">
+								20
+							</material_amount>
+						</variable>
+						<variable type="concentration" GMO_ID="001010" name="dextrose" units="g/L">
+							<material_amount measurement_type="estimated">
+								20
+							</material_amount>
+						</variable>
+						<variable type="concentration" GMO_ID="001007" name="agar" units="g/L">
+							<material_amount measurement_type="estimated">
+								20
+							</material_amount>
+						</variable>
+					</variables>
+				</domain>
+			</microenvironment>
+			<phenotype type="expected">	
+				<cell_cycle model="live_apoptotic" ID="0">
+					<cell_cycle_phase name="live" ID="0">
+						<birth_rate units="1/hours" measurement_type="inferred" standard_deviation="1.95832e-01">
+							8.40336e-01
+						</birth_rate>
+						<duration units="hour" measurement_type="inferred">
+							1.19
+						</duration>
+						<death_rate type="apoptosis" units="1/hour">
+							3.20924e-02
+						</death_rate>
+					</cell_cycle_phase>
+					<cell_death type="apoptosis" ID="1">
+						<duration units="hour" measurement_type="estimated">
+							31.16
+						</duration> 
+					</cell_death>
+				</cell_cycle>
+				<cell_death type="apoptosis">
+					<duration units="hour" measurement_type="estimated">
+						24
+					</duration>
+				</cell_death>
+				<geometrical_properties>
+					<lengths>
+						<radius units="micron" measurement_type="literature" range="2.04 3.12">
+							2.58 
+						</radius>
+					</lengths>
+					<areas>
+						<total_surface_area units="micron^2" measurement_type="literature" range="124.4 143.4">
+							133.9 
+						</total_surface_area>
+					</areas>
+					<volumes>
+						<total_volume units="micron^3" measurement_type="estimated">
+							42 
+						</total_volume>
+					</volumes>
+				</geometrical_properties>
+				<mechanics>
+					<maximum_cell_deformation units="percent" measurement_type="estimated">
+						68
+					</maximum_cell_deformation>
+					
+					<poisson_ratio units="dimensionless" measurement_type="inferred">
+						0.5
+					</poisson_ratio>
+					<youngs_modulus units="MPa" measurement_type="estimated" range="170 200">
+						185
+					</youngs_modulus>
+				</mechanics>
+			</phenotype>
+			
+			<cell_part name="cell wall">
+				<phenotype>	
+					<mechanics>
+						<youngs_modulus units="MPa" measurement_type="estimated">
+							185
+						</youngs_modulus>
+					</mechanics>
+				</phenotype>
+			</cell_part>
+			<custom>
+				<generation>
+					<minimum>
+                        1
+                    </minimum>
+                    <maximum>
+                        30
+                    </maximum>
+				</generation>
+			</custom>
+		</phenotype_dataset>
+        
+        
+        <custom>
+			<phenotype_dataset_family ID="0">
+				<name>
+					Daughter_YPD
+				</name>
+				<IDs>
+					0
+				</IDs>
+			</phenotype_dataset_family>
+			
+			<phenotype_dataset_family ID="1">
+				<name>
+					Mother_YPD
+				</name>
+				<IDs>
+					1
+				</IDs>
+			</phenotype_dataset_family>
+            
+			<transitions>
+                
+                <transition>
+					<start>
+						<phenotype_dataset_family_ID>
+							0
+						</phenotype_dataset_family_ID>
+					</start>
+					<finish>
+						<phenotype_dataset_family_ID>
+							1
+						</phenotype_dataset_family_ID>
+					</finish>
+					<trigger>
+						<mitosis>
+                            
+                        </mitosis>
+					</trigger>
+				</transition>
+                <transition>
+					<start>
+						<phenotype_dataset_family_ID>
+							0
+						</phenotype_dataset_family_ID>
+					</start>
+					<finish>
+						<phenotype_dataset_family_ID>
+							0
+						</phenotype_dataset_family_ID>
+					</finish>
+					<trigger>
+						<mitosis>
+                            
+                        </mitosis>
+					</trigger>
+				</transition>
+                
+                <transition>
+					<start>
+						<phenotype_dataset_family_ID>
+							1
+						</phenotype_dataset_family_ID>
+					</start>
+					<finish>
+						<phenotype_dataset_family_ID>
+							0
+						</phenotype_dataset_family_ID>
+					</finish>
+					<trigger>
+						<mitosis>
+                            
+                        </mitosis>
+					</trigger>
+				</transition>
+                
+                <transition>
+					<start>
+						<phenotype_dataset_family_ID>
+							1
+						</phenotype_dataset_family_ID>
+					</start>
+					<finish>
+						<phenotype_dataset_family_ID>
+							1
+						</phenotype_dataset_family_ID>
+					</finish>
+					<trigger>
+						<mitosis>
+                            
+                        </mitosis>
+					</trigger>
+				</transition>
+			</transitions>
+			
+		</custom>
+
+	</cell_line>
+</MultiCellDS>

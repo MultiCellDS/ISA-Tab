@@ -1,0 +1,202 @@
+<MultiCellDS version="1.0.0" type="cell_line">
+	<cell_line label="MCF10A" ID="0">
+		<metadata>
+			<MultiCellDB>
+				<ID>MCDS_L_0000000001</ID>
+				<name>MCF10A_JSB</name>
+			</MultiCellDB>
+			<description>
+				Digital cell line for MCF10A-JSB (sometimes referred to as MCF10A, MCF 10A, or MCF-10A) cells, generated from ATCC/PS-ON data (see below for sources). These are Breast epithelium (Mammary gland; Breast Non-tumorgenic) cells. 
+			</description>
+			<citation>
+				<text>
+					If this digital cell line is used in a publication, cite it as:
+					"We used digital cell line MCF10A_JSB [1] version 1 (MultiCellDB_ID: MCDS_L_0000000001), created with data and contributions from [2]."				
+					[1] S. H. Friedman et al., MultiCellDS: a standard and a community for sharing multicellular data (2016, submitted)
+					[2] Staunton, J.R., Fuhrmann, A., Ros, R. Mechanical Properties of MCF-10A and MDA-MB-231 Cells (PSON Wiki, Figure 2F) 
+				</text>			
+				<URL>http://MathCancer.org</URL>
+				<notes>Friedman SH et al., Recording microenvironment-dependent cell phenotypes as digital cell lines with MultiCellDS (2015, in preparation)</notes>
+			</citation>
+			<curation curated="true">  
+				<created>2015-06-05T17:00:00-07:00</created>
+				<last_modified>2016-11-29T11:00:00-08:00</last_modified>
+				<classification>
+					<classification_number>1.0.1.1</classification_number>
+					<line>1</line>
+					<variant>0</variant>
+					<branch>1</branch>
+					<version>1</version>
+				</classification>
+				<creator>
+					<orcid-identifier>
+						<path>0000-0001-8003-6860</path>
+						<given-names>Samuel</given-names>		
+						<family-name>Friedman</family-name>
+						<email>samuelf@usc.edu</email>
+						<url>http://MathCancer.org</url>
+						<organization-name>University of Southern California</organization-name>
+						<department-name>Center for Applied Molecular Medicine</department-name>
+					</orcid-identifier>
+				</creator>
+				<current_contact>  
+					<orcid-identifier>
+						<path>0000-0002-9925-0151</path>
+						<given-names>Paul</given-names>		
+						<family-name>Macklin</family-name>
+						<email>Paul.Macklin@usc.edu</email>
+						<url>http://MathCancer.org</url>
+						<organization-name>University of Southern California</organization-name>
+						<department-name>Center for Applied Molecular Medicine</department-name>
+					</orcid-identifier>
+				</current_contact>
+				<curator>  
+					<orcid-identifier>
+						<path>0000-0002-9925-0151</path>
+						<given-names>Paul</given-names>		
+						<family-name>Macklin</family-name>
+						<email>Paul.Macklin@usc.edu</email>
+						<url>http://MathCancer.org</url>
+						<organization-name>University of Southern California</organization-name>
+						<department-name>Center for Applied Molecular Medicine</department-name>
+					</orcid-identifier>
+				</curator>
+				<last_modified_by>
+					<orcid-identifier>
+        				<path>0000-0001-8003-6860</path>
+        				<given-names>Samuel H.</given-names>               
+        				<family-name>Friedman</family-name>
+        				<email>samuelf@usc.edu</email>
+        				<url>http://MathCancer.org</url>
+        				<organization-name>University of Southern California</organization-name>
+        				<department-name>Center for Applied Molecular Medicine</department-name>
+    				</orcid-identifier>
+				</last_modified_by>
+			</curation>
+			<data_origins> 
+				<data_origin>
+					<citation>
+						<URL>http://physics.cancer.gov/docs/bioresource/breast/NCI-PBCF-1000-SOP-052814_508.pdf</URL>
+						<URL>http://physics.cancer.gov/bioresources/SOPs.aspx</URL>
+					</citation>
+				</data_origin>
+			</data_origins>
+			<data_analysis> 
+				<URL>http://MathCancer.org</URL>
+				<citation/>
+			</data_analysis>
+			<rights>
+    			<license>
+        			<LicenseDocument>
+            			<name>CC-BY 4.0</name>
+            			<URL>https://creativecommons.org/licenses/by/4.0/</URL>
+        			</LicenseDocument>
+    			</license>
+			</rights>
+			<custom>
+				<organism>Homo sapiens</organism>
+				<organ>Mammary gland; Breast</organ>
+				<disease>Fibrocystic disease; nontumorigenic</disease>
+				<morphology>N/A</morphology>
+			</custom>
+		</metadata>	
+		<phenotype_dataset ID="0" keywords="normoxic">
+			<microenvironment>
+				<domain>
+					<variables>
+						<variable type="concentration" ChEBI_ID="15379" name="oxygen" units="mmHg">
+							<material_amount measurement_type="direct">160</material_amount>
+						</variable>
+					</variables>
+				</domain>
+			</microenvironment>			
+			<phenotype type="expected">	
+				<geometrical_properties>
+					<lengths>
+						<radius measurement_type="inferred" units="micron" uncertainty="0.901">
+							8.413
+						</radius>
+					</lengths>
+					<volumes>
+						<total_volume measurement_type="inferred" units="micron^3" uncertainty="801">
+							2494
+						</total_volume>
+					</volumes>
+				</geometrical_properties>
+				<mechanics>
+					<poisson_ratio measurement_type="estimated" units="dimensionless">
+						0.4
+					</poisson_ratio>
+					<youngs_modulus measurement_type="inferred" units="Pascals" uncertainty="1846">
+						2137
+					</youngs_modulus>
+				</mechanics>
+			</phenotype>
+			<cell_part name="nucleus">
+				<phenotype type="expected">	
+					<geometrical_properties>
+						<lengths>
+							<radius measurement_type="inferred" units="micron" uncertainty="0.31">
+								3.81
+							</radius>
+						</lengths>
+						<areas>
+							<total_surface_area measurement_type="inferred" units="micron^2" uncertainty="57">
+								231
+							</total_surface_area>
+						</areas>
+						<volumes>
+							<total_volume measurement_type="inferred" units="micron^3" uncertainty="179">
+								540
+							</total_volume>
+						</volumes>
+					</geometrical_properties>
+					<mechanics>
+						<poisson_ratio measurement_type="estimated" units="dimensionless">
+							0.4
+						</poisson_ratio>
+						<youngs_modulus measurement_type="inferred" units="Pascals" uncertainty="1956">
+							2294
+						</youngs_modulus>
+					</mechanics>
+				</phenotype>
+				<cell_part name="nucleolus">
+					<phenotype type="expected">
+						<geometrical_properties>
+							<lengths>
+								<radius measurement_type="inferred" units="micron" uncertainty="0.269">
+									1.387
+								</radius>
+							</lengths>
+							<volumes>
+								<total_volume measurement_type="inferred" units="micron^3" uncertainty="6.51">
+									11.18
+								</total_volume>
+							</volumes>
+						</geometrical_properties>
+						<mechanics>
+							<poisson_ratio measurement_type="estimated" units="dimensionless">
+								0.4
+							</poisson_ratio>
+							<youngs_modulus measurement_type="inferred" units="Pascals" uncertainty="1797">
+								2108
+							</youngs_modulus>
+						</mechanics>
+					</phenotype>				
+				</cell_part>				
+			</cell_part>
+			<cell_part name="cytoplasm">
+				<phenotype type="expected">	
+					<mechanics>
+						<poisson_ratio measurement_type="estimated" units="dimensionless">
+							0.4
+						</poisson_ratio>
+						<youngs_modulus measurement_type="inferred" units="Pascals" uncertainty="1669">
+							1918
+						</youngs_modulus>
+					</mechanics>
+				</phenotype>
+			</cell_part>
+		</phenotype_dataset>
+	</cell_line>
+</MultiCellDS>

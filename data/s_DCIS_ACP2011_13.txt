@@ -1,0 +1,6 @@
+Source Name	Comment[citation]	Comment[citation]	Comment[citation]	Characteristics[species]	Characteristics[organ]	Characteristics[disease]	Characteristics[morphology]	Factor Value[phenotype_dataset]	Sample Name
+MCDS_L_0000000050.0	PMID: 21988888	PMID: 23084996	PMID: 22342935	Homo sapiens	Mammary gland; Breast	ductal carcinoma in situ	mixed	viable	MCDS_L_0000000050.0.0
+MCDS_L_0000000050.0	PMID: 21988888	PMID: 23084996	PMID: 22342935	Homo sapiens	Mammary gland; Breast	ductal carcinoma in situ	mixed	hypoxic	MCDS_L_0000000050.0.1
+MCDS_L_0000000050.0	PMID: 21988888	PMID: 23084996	PMID: 22342935	Homo sapiens	Mammary gland; Breast	ductal carcinoma in situ	mixed	physioxia(standard)	MCDS_L_0000000050.0.2
+MCDS_L_0000000050.0	PMID: 21988888	PMID: 23084996	PMID: 22342935	Homo sapiens	Mammary gland; Breast	ductal carcinoma in situ	mixed	physioxia(breast)	MCDS_L_0000000050.0.3
+MCDS_L_0000000050.0	PMID: 21988888	PMID: 23084996	PMID: 22342935	Homo sapiens	Mammary gland; Breast	ductal carcinoma in situ	mixed	necrotic,chronic hypoxia	MCDS_L_0000000050.0.4

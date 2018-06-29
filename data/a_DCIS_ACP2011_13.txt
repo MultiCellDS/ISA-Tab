@@ -1,0 +1,6 @@
+Sample Name	Protocol REF	Parameter Value[oxygen.partial_pressure] 	Unit	Parameter Value[DCIS_cell_density(2D).surface_density] 	Unit	Parameter Value[DCIS_cell_area_fraction.area_fraction] 	Unit	Parameter Value[DCIS_cell_volume_fraction.volume_fraction] 	Unit	Data File
+MCDS_L_0000000050.0.0	microenvironment.measurement	7.18	mmHg	0.00279	1/micron^2	1.0	dimensionless	1.0	dimensionless	DCIS_ACP2011_13.xml
+MCDS_L_0000000050.0.1	microenvironment.measurement	8.0	mmHg							DCIS_ACP2011_13.xml
+MCDS_L_0000000050.0.2	microenvironment.measurement	38.0	mmHg							DCIS_ACP2011_13.xml
+MCDS_L_0000000050.0.3	microenvironment.measurement	52.0	mmHg							DCIS_ACP2011_13.xml
+MCDS_L_0000000050.0.4	microenvironment.measurement	5.0	mmHg							DCIS_ACP2011_13.xml

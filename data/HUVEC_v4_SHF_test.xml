@@ -1,0 +1,571 @@
+<MultiCellDS version="1.0.0" type="cell_line">
+	<cell_line label="HUVEC" ID="0">
+		<metadata>
+			<MultiCellDB>
+				<ID>MCDS_L_0000000043</ID>
+				<name>HUVEC</name>
+			</MultiCellDB>
+			<description>
+				Digital cell line for HUVEC cells, generated from data provided by Kerri-Ann Norton on 2016-02-29. These are Hunman Umbilical Vein/Vascular Endothelium cancer cells.
+			</description>
+			<citation>
+				<text>
+					If this digital cell line is used in a publication, cite it as:
+					"We used digital cell line HUVEC [1] version 1.0 (MultiCellDB_ID: MCDS_L_0000000043), created with data and contributions from [2-6]."				
+					[1] S. H. Friedman et al., MultiCellDS: a standard and a community for sharing multicellular data (2016, submitted)
+					[2] Juarez, E. F., et al. (2016). "Quantifying differences in cell line population dynamics using CellPD." BMC Systems Biology 10(1): 92.					
+					[3] Stamatelos, S. K., et al. (2014). "A bioimage informatics based reconstruction of breast tumor microvasculature with computational blood flow predictions." Microvascular research 91: 8-21.
+					[4] Finley, S. D., et al. (2015). "Pharmacokinetics of Anti-VEGF Agent Aflibercept in Cancer Predicted by Data-Driven, Molecular-Detailed Model." CPT: Pharmacometrics and Systems Pharmacology 4(11): 641-649.
+					[5] Lee, E., et al. (2011). "Small peptides derived from somatotropin domain-containing proteins inhibit blood and lymphatic endothelial cell proliferation, migration, adhesion and tube formation." The International Journal of Biochemistry and Cell Biology 43(12): 1812-1821.
+					[6] Siemerink, M. J., et al. (2012). "CD34 marks angiogenic tip cells in human vascular endothelial cell cultures." Angiogenesis 15(1): 151-163.
+				</text>			
+				<URL>http://MathCancer.org</URL>
+				<notes>S. H. Friedman et al., MultiCellDS: a standard and a community for sharing multicellular data (2016, submitted)</notes>
+			</citation>
+			<curation curated="false">
+				<created>2016-02-29T09:19:43.205212-08:00</created>
+				<last_modified>2016-11-29T11:00:00-08:00</last_modified>
+				<classification>
+					<classification_number>39.0.0.1</classification_number>
+					<line>39</line>
+					<variant>0</variant>
+					<branch>0</branch>
+					<version>1</version>
+				</classification>
+				<creator>
+					<orcid-identifier>
+						<path>0000-0003-1062-3642</path>
+						<given-names>Edwin Francisco</given-names>		
+						<family-name>Juarez Rosales</family-name>
+						<email>juarezro@usc.edu</email>
+						<url>MathCancer.org</url>
+						<organization-name>University of Southern California</organization-name>
+						<department-name>Electrical Engineering</department-name>
+					</orcid-identifier>
+					<orcid-identifier>
+						<path>0000-0003-1002-9467</path>
+						<given-names>Kerri-Ann</given-names>		
+						<family-name>Norton</family-name>
+						<email/>
+						<url/>
+						<organization-name/>
+						<department-name/>
+					</orcid-identifier>
+					<orcid-identifier>
+						<path>0000-0001-8003-6860</path>
+						<given-names>Samuel H.</given-names>               
+						<family-name>Friedman</family-name>
+						<email>samuelf@usc.edu</email>
+						<url>http://MathCancer.org</url>
+						<organization-name>University of Southern California</organization-name>
+						<department-name>Center for Applied Molecular Medicine</department-name>
+					</orcid-identifier>
+				</creator>
+				<current_contact>  
+					<orcid-identifier>
+						<path>0000-0003-1002-9467</path>
+						<given-names>Kerri-Ann</given-names>		
+						<family-name>Norton</family-name>
+						<email>kerri.norton@gmail.com</email>
+						<url/>
+						<organization-name>Johns Hopkins</organization-name>
+						<department-name>Biomedical Engineering</department-name>
+					</orcid-identifier>
+				</current_contact>
+				<curator>  
+					<orcid-identifier>
+						<path>0000-0003-1002-9467</path>
+						<given-names>Kerri-Ann</given-names>		
+						<family-name>Norton</family-name>
+						<email>kerri.norton@gmail.com</email>
+						<url/>
+						<organization-name>Johns Hopkins University</organization-name>
+						<department-name>Biomedical Engineering</department-name>
+					</orcid-identifier>
+				</curator>
+				<last_modified_by>
+					<orcid-identifier>
+        				<path>0000-0001-8003-6860</path>
+        				<given-names>Samuel H.</given-names>               
+        				<family-name>Friedman</family-name>
+        				<email>samuelf@usc.edu</email>
+        				<url>http://MathCancer.org</url>
+        				<organization-name>University of Southern California</organization-name>
+        				<department-name>Center for Applied Molecular Medicine</department-name>
+    				</orcid-identifier>
+				</last_modified_by>
+			</curation>
+			<data_origins> 
+				<data_origin>
+					<citation>
+						<DOI>10.1016/j.biocel.2011.08.020</DOI>
+						<URL>http://www.sciencedirect.com/science/article/pii/S1357272511002408</URL>
+						<URL>http://www.ncbi.nlm.nih.gov/pubmed/21920451</URL>
+						<PMID>21920451</PMID>
+					</citation>
+					<xpath>
+						//cell_cycle/cell_cycle_phase/duration
+						//cell_death/duration
+					</xpath>
+					<notes>
+						<!--elements_covered-->
+							phenotype/mechanics/youngs_modulus <!-- Use XPATH -->
+						<!--/elements_covered-->
+					</notes>
+				</data_origin>
+				<data_origin>
+					<citation>
+						<DOI>
+							10.1002/psp4.12040
+						</DOI>
+						<notes>
+							This is the VEGF165 data
+						</notes>
+					</citation>
+					<xpath>
+						//phenotype_dataset[contains(@keywords,"phalanx")]/phenotype/transport_processes/variable[contains(@UniProt_ID,"P15692-4")]/export_rate
+					</xpath>
+				</data_origin>
+				<data_origin>
+					<citation>
+						<notes>
+							Stamatelos, S. K., et al. (2014). "A bioimage informatics based reconstruction of breast tumor microvasculature with computational blood flow predictions." Microvascular research 91: 8-21.
+						</notes>
+					</citation>
+					<xpath>
+						/MultiCellDS/cell_line[1]/phenotype_dataset[1]/phenotype[1]/geometrical_properties[1]/lengths[1]/radius
+					</xpath>
+				</data_origin>
+				<data_origin>
+					<citation>
+						<URL>https://www.ncbi.nlm.nih.gov/pubmed/?term=PMC3274677</URL>
+						<PMCID>PMC3274677</PMCID>
+						<notes>Siemerink, M. J., et al. (2012). "CD34 marks angiogenic tip cells in human vascular endothelial cell cultures." Angiogenesis 15(1): 151-163.</notes>
+					</citation>
+					<xpath>
+						/MultiCellDS/cell_line[1]/custom[1]
+					</xpath>
+				</data_origin>
+			</data_origins>
+			<data_analysis> 
+				<URL>http://MathCancer.org</URL>
+				<notes>//cell_cycle/cell_cycle_phase/duration does not have associated uncertainty measures because it is a derived quantity from the corresponding rate.</notes>
+			</data_analysis>
+			<rights>
+    			<license>
+        			<LicenseDocument>
+            			<name>CC-BY 4.0</name>
+            			<URL>https://creativecommons.org/licenses/by/4.0/</URL>
+        			</LicenseDocument>
+    			</license>
+			</rights>
+			<cell_origin>
+				<BTO_ID>0001949</BTO_ID>
+				<CLO_ID>0004307</CLO_ID>
+				<species>Homo sapiens</species>
+				<organ>Umbilical Vein; Umbilical Cord</organ>
+				<custom>
+					<company>
+						<name>
+							Lonza	
+						</name>
+					</company>
+				</custom>
+			</cell_origin>
+			<notes>
+				The tip and stalk DCL cell cycle arrests have very large uncertainty. Don't trust the model named 'total_logistic', use 'total' instead. See below for details.
+				xpath: //phenotype_dataset[contains(@keywords,"tip,CD34+")]//cell_cycle[@model="total_logistic"]/cell_cycle_phase[@name="growth_phase"]/cell_cycle_arrest has such a large uncertainty that should not be trusted
+				xpath: //phenotype_dataset[contains(@keywords,"stalk,CD34-")]//cell_cycle[@model="total_logistic"]/cell_cycle_phase[@name="growth_phase"]/cell_cycle_arrest has such a large uncertainty that should not be trusted
+			</notes>
+			<custom>
+				<curation/>
+				<curator/>
+			</custom>
+		</metadata>	
+		<phenotype_dataset ID="0" keywords="normoxic,phalanx,vegfA165,">
+			<microenvironment>
+				<domain>
+					<variables>
+						<variable type="concentration" ChEBI_ID="15379" name="oxygen" units="mmHg">
+							<material_amount measurement_type="estimated">
+							160 <!-- 21% oxygen atmosphere -->
+							</material_amount>
+						</variable>
+						<variable type="concentration" ChEBI_ID="15379" name="CO2" units="mmHg">
+							<material_amount measurement_type="literature">
+							38
+							</material_amount>
+						</variable>
+						<physical_parameter_set>
+							<conditions>
+								<temperature units="Celsius">
+									37
+								</temperature>
+							</conditions>
+						</physical_parameter_set>
+					</variables>
+				</domain>
+			</microenvironment>			
+			<phenotype type="expected">	
+				<cell_cycle model="total" ID="0">
+					<cell_cycle_phase name="growth_phase" ID="0">
+						<duration units="hours" measurement_type="assumed">INF</duration>
+						<net_birth_rate units="1/hours" measurement_type="assumed">
+							0.0
+						</net_birth_rate>
+					</cell_cycle_phase>
+				</cell_cycle>
+				<geometrical_properties>
+					<lengths>
+						<radius units="micron" measurement_type="literature">
+							9.23
+						</radius>
+					</lengths>
+				</geometrical_properties>
+				<transport_processes>
+					<variable name="VEGFA 165" UniProt_ID="P15692-11" ChEBI_ID="91189" MeSH_ID="C467484" PR_ID="000017284">
+						<export_rate units="molecules/s" measurement_type="literature">
+							6.97e-5
+						</export_rate>
+					</variable>
+				</transport_processes>
+			</phenotype>
+			<custom>
+				<state>
+					<name>
+						phalanx
+					</name>
+				</state>
+			</custom>
+		</phenotype_dataset>
+		<phenotype_dataset ID="1" keywords="normoxic,tip,CD34+,vegfA165+,glass surface">
+			<microenvironment>
+				<domain>
+					<variables>
+						<variable type="concentration" ChEBI_ID="15379" name="oxygen" units="mmHg">
+							<material_amount measurement_type="estimated">
+								160 <!-- 21% oxygen atmosphere -->
+							</material_amount>
+						</variable>
+						<variable type="density" GO_ID="0031012" name="ECM" units="1/micron^3">
+							<material_amount measurement_type="estimated">
+								62
+							</material_amount>
+						</variable>
+						<variable name="VEGFA 165" type="density" ChEBI_ID="15379" MeSH_ID="C467484" UniProt_ID="P15692-11" PR_ID="000017284" units="ng / mL">
+							<material_amount measurement_type="literature" units="ng / mL" min="0.5" max="INF" range="0.5 1.0e9">
+								0.5
+							</material_amount>
+						</variable>
+						<variable name="ANGPTL4" type="density" units="ng / mL" UniProt_ID="Q9BY76">
+							<material_amount measurement_type="literature">
+								0.5
+							</material_amount>
+						</variable>
+					</variables>
+					<experimental_condition>
+						<dimensionality>2</dimensionality>
+						<system>in vitro</system>
+						<conditions>surface</conditions>
+						<surface_variable name="glass" ChEBI_ID="15379" MeSH_ID="D005898"/>
+					</experimental_condition>
+				</domain>
+			</microenvironment>			
+			<phenotype type="expected">	
+				<cell_cycle model="total" ID="0">
+					<cell_cycle_phase name="growth_phase" ID="0">
+						<duration units="hours" measurement_type="inferred">
+							31
+						</duration>
+						<net_birth_rate units="1/hours" measurement_type="inferred" standard_error_of_the_mean="0.00148">
+						0.0322
+						</net_birth_rate>
+					</cell_cycle_phase>
+				</cell_cycle>
+				<cell_cycle model="total_logistic" ID="1">
+					<cell_cycle_phase name="growth_phase" ID="0">
+						<duration units="hours" measurement_type="inferred">
+							31
+						</duration>
+						<net_birth_rate units="1/hours" measurement_type="inferred" standard_error_of_the_mean="0.0119">
+						0.0322
+						</net_birth_rate>
+						<cell_cycle_arrest>
+							<condition type="maximum_cell_density" units="number of cells" measurement_type="inferred" standard_error_of_the_mean="2.56e+14">
+							4.82e+08
+							</condition>
+						</cell_cycle_arrest>
+					</cell_cycle_phase>
+				</cell_cycle>
+				<cell_death type="apoptosis">
+					<duration units="hour" measurement_type="estimated">
+						24
+					</duration> 
+				</cell_death>
+				<mechanics>
+					<maximum_cell_deformation measurement_type="literature" units="micron / hour" range="5 11">6.2</maximum_cell_deformation>
+				</mechanics>
+				<motility>
+					<restricted>
+						<timescale>0</timescale>
+						<mean_speed>0.0
+						</mean_speed>
+						<persistence>0.0
+						</persistence>
+					</restricted>
+				</motility>
+			</phenotype>
+			<custom>
+				<state>
+					<name>
+						tip
+					</name>
+				</state>
+			</custom>
+		</phenotype_dataset>
+		<phenotype_dataset ID="3" keywords="normoxic,tip,CD34+,vegfA165+,fibrin surface">
+			<microenvironment>
+				<domain>
+					<variables>
+						<variable type="concentration" ChEBI_ID="15379" name="oxygen" units="mmHg">
+							<material_amount measurement_type="estimated">
+								160 <!-- 21% oxygen atmosphere -->
+							</material_amount>
+						</variable>
+						<variable type="density" GO_ID="0031012" name="ECM" units="1/micron^3">
+							<material_amount measurement_type="estimated">
+								62
+							</material_amount>
+						</variable>
+						<variable name="VEGFA 165" type="density" ChEBI_ID="15379" MeSH_ID="C467484" UniProt_ID="P15692-11" PR_ID="000017284" units="ng / mL">
+							<material_amount measurement_type="literature" units="ng / mL" min="0.5" max="INF" range="0.5 1.0e9">
+								0.5
+							</material_amount>
+						</variable>
+						<variable name="ANGPTL4" type="density" units="ng / mL" UniProt_ID="Q9BY76">
+							<material_amount measurement_type="literature">
+								0.5
+							</material_amount>
+						</variable>
+					</variables>
+					<experimental_condition>
+						<dimensionality>2</dimensionality>
+						<system>in vitro</system>
+						<conditions>surface</conditions>
+					</experimental_condition>
+				</domain>
+			</microenvironment>			
+			<phenotype type="expected">	
+				<cell_cycle model="total" ID="0">
+					<cell_cycle_phase name="growth_phase" ID="0">
+						<duration units="hours" measurement_type="inferred">
+							31
+						</duration>
+						<net_birth_rate units="1/hours" measurement_type="inferred" standard_error_of_the_mean="0.00148">
+							0.0322
+						</net_birth_rate>
+					</cell_cycle_phase>
+				</cell_cycle>
+				<cell_cycle model="total_logistic" ID="1">
+					<cell_cycle_phase name="growth_phase" ID="0">
+						<duration units="hours" measurement_type="inferred">
+							31
+						</duration>
+						<net_birth_rate units="1/hours" measurement_type="inferred" standard_error_of_the_mean="0.0119">
+							0.0322
+						</net_birth_rate>
+						<cell_cycle_arrest>
+							<condition type="maximum_cell_density" units="number of cells" measurement_type="inferred" standard_error_of_the_mean="2.56e+14">
+								4.82e+08
+							</condition>
+						</cell_cycle_arrest>
+					</cell_cycle_phase>
+				</cell_cycle>
+				<cell_death type="apoptosis">
+					<duration units="hour" measurement_type="estimated">
+						24
+					</duration> 
+				</cell_death>
+				<mechanics>
+					<maximum_cell_deformation measurement_type="literature" units="micron / hour" range="5 11">6.2</maximum_cell_deformation>
+				</mechanics>
+				<motility>
+					<restricted ID="0">
+						<timescale units="hour">24</timescale>
+						<restriction>
+							<surface_variable name="glass"/>
+						</restriction>
+						<mean_speed units="micron / hour" standard_deviation="3.22" number_obs="11">15.25</mean_speed>
+						<persistence units="hour" standard_deviation="0.85" number_obs="11">2.58</persistence>
+						<diffusion_coefficient units="10^-6 cm^2 / h" standard_deviation="0.98" number_obs="11">3.00</diffusion_coefficient>
+					</restricted>
+					<restricted ID="1">
+						<timescale units="hour">24</timescale>
+						<restriction>
+							<surface_variable name="fibrinogen" MeSH_ID="D005340"/>
+						</restriction>
+						<mean_speed units="micron / hour" standard_deviation="1.11" number_obs="8">14.86</mean_speed>
+						<persistence units="hour" standard_deviation="0.63" number_obs="8">2.14</persistence>
+						<diffusion_coefficient units="10^-6 cm^2 / h" standard_deviation="0.71" number_obs="8">2.37</diffusion_coefficient>
+					</restricted>
+				</motility>
+			</phenotype>
+			<custom>
+				<state>
+					<name>
+						tip
+					</name>
+				</state>
+			</custom>
+		</phenotype_dataset>
+		<phenotype_dataset ID="2" keywords="normoxic,stalk,CD34-,vegfA165,multiple_words_together">
+			<microenvironment>
+				<domain>
+					<variables>
+						<variable type="concentration" ChEBI_ID="15379" name="oxygen" units="mmHg">
+							<material_amount measurement_type="estimated">
+								160 <!-- 21% oxygen atmosphere -->
+							</material_amount>
+						</variable>
+						<variable type="density" GO_ID="0031012" name="ECM" units="1/micron^3">
+							<material_amount measurement_type="estimated">
+								62
+							</material_amount>
+						</variable>
+						<variable name="DLL4" UniProt_ID="Q9NR61" units="ng / mL">
+							<material_amount measurement_type="estimated" uncertainty="5">
+								5
+							</material_amount>
+						</variable>
+					</variables>
+				</domain>
+			</microenvironment>			
+			<phenotype type="expected">	
+				<cell_cycle model="total" ID="0">
+					<cell_cycle_phase name="growth_phase" ID="0">
+						<duration units="hours" measurement_type="inferred">
+							27.4
+						</duration>
+						<net_birth_rate units="1/hours" measurement_type="inferred" standard_error_of_the_mean="0.00206">
+							0.0364
+						</net_birth_rate>
+					</cell_cycle_phase>
+				</cell_cycle>
+				<cell_cycle model="total_logistic" ID="1">
+					<cell_cycle_phase name="growth_phase" ID="0">
+						<duration units="hours" measurement_type="inferred">
+							27.4
+						</duration>
+						<net_birth_rate units="1/hours" measurement_type="inferred" standard_error_of_the_mean="0.00525">
+							0.0364
+						</net_birth_rate>
+						<cell_cycle_arrest>
+							<condition type="maximum_cell_density" units="number of cells" measurement_type="inferred" standard_error_of_the_mean="6.33e+14">
+								2.38e+09
+							</condition>
+						</cell_cycle_arrest>
+					</cell_cycle_phase>
+				</cell_cycle>
+				<cell_death type="apoptosis">
+					<duration units="hour" measurement_type="estimated">
+						24
+					</duration> 
+				</cell_death>
+			</phenotype>
+			<custom>
+				<state>
+					<name>
+						stalk
+					</name>
+				</state>
+			</custom>
+		</phenotype_dataset>
+		
+		<phenotype_dataset ID="4" keywords="normoxic,all,vegfA189+,gelatin surface">
+		<microenvironment>
+				<domain>
+					<variables>
+						<variable type="concentration" ChEBI_ID="15379" name="oxygen" units="mmHg">
+							<material_amount measurement_type="estimated">
+								160 <!-- 21% oxygen atmosphere -->
+							</material_amount>
+						</variable>
+						<variable type="volume_percentage" GO_ID="D005780" name="gelatin" units="">
+							<material_amount measurement_type="literature">
+								0.2
+							</material_amount>
+						</variable>
+						<variable name="VEGFA 189" type="density" ChEBI_ID="15379" MeSH_ID="C467484" UniProt_ID="P15692-11" PR_ID="000017284" units="ng / mL">
+							<material_amount measurement_type="literature" units="ng / mL" min="0.5" max="INF" range="0.5 1.0e9">
+								0.5
+							</material_amount>
+						</variable>
+						<variable name="DLL4" UniProt_ID="Q9NR61" units="ng / mL">
+							<material_amount measurement_type="estimated" uncertainty="5">
+								5
+							</material_amount>
+						</variable>
+					</variables>
+				</domain>
+			</microenvironment>		
+		</phenotype_dataset>
+		<custom>
+		<transitions>
+			<phenotype_dataset_collection ID="0">
+				<name>
+					phalanx
+				</name>
+				<IDs>
+					0
+				</IDs>
+			</phenotype_dataset_collection>
+
+			<phenotype_dataset_collection ID="1">
+				<name>
+					tip
+				</name>
+				<IDs>
+					1
+				</IDs>
+			</phenotype_dataset_collection>
+
+			<phenotype_dataset_collection ID="2">
+				<name>
+					stalk
+				</name>
+				<IDs>
+					2
+				</IDs>
+			</phenotype_dataset_collection>
+
+			<transition>
+				<start>
+					<phenotype_dataset_collection_ID>
+						0
+					</phenotype_dataset_collection_ID>
+				</start>
+				<finish>
+					<phenotype_dataset_collection_ID>
+						1
+					</phenotype_dataset_collection_ID>
+				</finish>
+				<probability units="1/year">
+					0.01
+				</probability>
+				<conditions> <!-- Multiple conditions work like a boolean AND -->
+					<variable name="CD34" UniProt_ID="P28906" PR_ID="PR:000001003"> <!-- units can be up here as well -->
+						<condition condition_type="positive_threshold" uncertainty="1" units="nM">
+							5
+						</condition>
+						<condition condition_type="negative_threshold" uncertainty="1" units="nM">
+							10
+						</condition>
+					</variable>
+				</conditions>
+				<!-- Multiple conditions elements allow for a boolean OR -->
+			</transition>
+
+		</transitions>
+		</custom>
+	</cell_line>
+</MultiCellDS>

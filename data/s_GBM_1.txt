@@ -1,0 +1,2 @@
+Source Name	Comment[citation]	Characteristics[species]	Characteristics[organ]	Characteristics[disease]	Characteristics[patient_derived]	Factor Value[phenotype_dataset]	Sample Name
+MCDS_L_0000000066.0	PMID: 24832620	Homo sapiens	Brain	Glioblastoma Multiforme	true	clinical,patient,MRI	MCDS_L_0000000066.0.0
