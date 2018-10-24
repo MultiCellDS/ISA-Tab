@@ -12,6 +12,7 @@
 # Author: Randy Heiland
 # Date:
 #   v0.1 - May 2018
+#   v0.2 - Oct 2018 : add more tab sep_char in various rows
 # 
 
 import os
