@@ -14,6 +14,7 @@
 #   v0.1 - May 2018
 # 
 
+import os
 import sys
 import re
 import xml.etree.ElementTree as ET
@@ -40,9 +41,14 @@ if not Path(xml_file).is_file():
 	print(xml_file + 'does not exist!')
 	sys.exit(-1)
 
-investigation_filename = "i_" + xml_file[:-4] + ".txt"
-study_filename = "s_" + xml_file[:-4] + ".txt"
-assay_filename = "a_" + xml_file[:-4] + ".txt"
+if (os.sep in xml_file):
+  xml_base_filename = xml_file[xml_file.rfind(os.sep)+1:]
+else:
+  xml_base_filename = xml_file
+
+investigation_filename = "i_" + xml_base_filename[:-4] + ".txt"
+study_filename = "s_" + xml_base_filename[:-4] + ".txt"
+assay_filename = "a_" + xml_base_filename[:-4] + ".txt"
 
 fp = open(investigation_filename, 'w')
 
@@ -57,6 +63,8 @@ fp.write('INVESTIGATION\n')
 i_identifier = '"' + xml_root.find(".//metadata").find(".//ID").text + '"'
 i_title = '"' + xml_root.find(".//metadata").find(".//name").text + '"'
 i_desc = '"' + xml_root.find(".//metadata").find(".//description").text + '"'
+i_desc = re.sub('\t','',i_desc)
+i_desc = re.sub('\n','',i_desc)
 fp.write('Investigation Identifier' + sep_char + i_identifier + '\n')
 fp.write('Investigation Title' + sep_char +  i_title + '\n')
 fp.write('Investigation Description' + sep_char + i_desc + '\n')
@@ -77,6 +85,7 @@ fp.write('INVESTIGATION PUBLICATIONS\n')
 # TODO? will we have matching # of each?
 pmid = []
 doi = []
+url = []
 uep = xml_root.find('.//data_origins')  # uep = unique entry point
 for elm in uep.findall('data_origin'):
 #    doi.append(elm.find('.//DOI').text)
@@ -85,7 +94,7 @@ for elm in uep.findall('data_origin'):
       doi_value = ""
     else:
       doi_value = doi_ptr.text
-    doi.append(doi_value)
+    doi.append(doi_value)  # do we want to append "" if none??
 
 #    pmid.append(elm.find('.//PMID').text)
     pmid_ptr = elm.find('.//PMID')
@@ -93,7 +102,18 @@ for elm in uep.findall('data_origin'):
       pmid_value = ""
     else:
       pmid_value = pmid_ptr.text
-    pmid.append(pmid_value)
+      pmid.append(pmid_value)
+#    pmid.append(pmid_value)
+
+    url_ptr = elm.find('.//URL')
+    if (url_ptr == None):
+      url_value = ""
+    else:
+      url_value = url_ptr.text
+      url.append(url_value)
+
+print("(post data_origin) pmid=",pmid)
+print("(post data_origin) url=",url)
 
 uep = xml_root.find('.//metadata')
 for elm in uep.findall('data_analysis'):
@@ -105,7 +125,7 @@ for elm in uep.findall('data_analysis'):
     doi_value = ""
   else:
     doi_value = doi_ptr.text
-  doi.append(doi_value)
+  doi.append(doi_value)  # do we want to append "" if none??
 
 #    pmid.append(elm.find('.//PMID').text)
   pmid_ptr = elm.find('.//PMID')
@@ -113,31 +133,34 @@ for elm in uep.findall('data_analysis'):
     pmid_value = ""
   else:
     pmid_value = pmid_ptr.text
-  pmid.append(pmid_value)
+    pmid.append(pmid_value)
+#  pmid.append(pmid_value)
+
+print("(post data_analysis) pmid=",pmid)
 
 sep_char_sq = sep_char + '"'   # tab + single quote
 
 pmid_str = ''
 for elm in pmid:
   pmid_str += sep_char + '"' + elm + '"'
-fp.write('Investigation PubMed ID' + pmid_str + '\n')
+fp.write('Investigation PubMed ID' + sep_char + pmid_str + '\n')
 
 doi_str = ''
 for elm in doi:
   doi_str += sep_char + '"' + elm + '"'
-fp.write('Investigation Publication DOI' + doi_str + '\n')
+fp.write('Investigation Publication DOI' + sep_char + doi_str + '\n')
 
 empty_str = ''.join(sep_char + '""' for x in pmid) 
-fp.write('Investigation Publication Author List' + empty_str + '\n')
-fp.write('Investigation Publication Title' + empty_str + '\n')
+fp.write('Investigation Publication Author List' + sep_char + empty_str + '\n')
+fp.write('Investigation Publication Title' + sep_char + empty_str + '\n')
 
 pub_status_str = ''.join('\t"Published"' for x in pmid) 
 pub_title_str = ''.join('\t""' for x in pmid) 
-fp.write('Investigation Publication Status' + pub_status_str + '\n')
+fp.write('Investigation Publication Status' + sep_char + pub_status_str + '\n')
 pub_status_TA_str = ''.join('\t"C19026"' for x in pmid) 
-fp.write('Investigation Publication Status Term Accession' + pub_status_TA_str + '\n')
+fp.write('Investigation Publication Status Term Accession' + sep_char + pub_status_TA_str + '\n')
 pub_status_TSR_str = ''.join('\t"NCIT"' for x in pmid) 
-fp.write('Investigation Publication Status Term Source REF' + pub_status_TSR_str + '\n')
+fp.write('Investigation Publication Status Term Source REF' + sep_char + pub_status_TSR_str + '\n')
 
 fp.write('INVESTIGATION CONTACTS\n') 
 fp.write('Investigation Person Last Name' + sep_char_sq + xml_root.find(".//current_contact").find(".//family-name").text + '"\t\n') 
@@ -173,13 +196,13 @@ fp.write('Study Design Type Term Source REF\t""\n')
 
 # TODO? are these different than the previous pubs?
 fp.write('STUDY PUBLICATIONS\n')
-fp.write('Study PubMed ID' + pmid_str + '\n')
-fp.write('Study Publication DOI' + doi_str + sep_char + '\n')
-fp.write('Study Publication Author List' + empty_str + '\n')
-fp.write('Study Publication Title' + pub_title_str + '\n')
-fp.write('Study Publication Status' + pub_status_str + sep_char + '\n')
-fp.write('Study Publication Status Term Accession Number' + pub_status_TA_str + sep_char + '\n')
-fp.write('Study Publication Status Term Source REF' + pub_status_TSR_str + '\n')
+fp.write('Study PubMed ID' + sep_char + pmid_str + '\n')
+fp.write('Study Publication DOI' + sep_char + doi_str + sep_char + '\n')
+fp.write('Study Publication Author List' + sep_char + empty_str + '\n')
+fp.write('Study Publication Title' + sep_char + pub_title_str + '\n')
+fp.write('Study Publication Status' + sep_char + pub_status_str + sep_char + '\n')
+fp.write('Study Publication Status Term Accession Number' + sep_char + pub_status_TA_str + sep_char + '\n')
+fp.write('Study Publication Status Term Source REF' + sep_char + pub_status_TSR_str + '\n')
 
 
 fp.write('STUDY FACTORS' + 3*sep_char + '\n')
@@ -311,6 +334,7 @@ print(' --> ' + investigation_filename)
 #=======================================================================
 fp = open(study_filename, 'w')
 
+# row #1 (column titles)
 fp.write('Source Name' + sep_char)
 source_name = i_identifier[1:-1] + '.0'
 
@@ -335,12 +359,20 @@ if (uep):
 
 fp.write('Factor Value[phenotype_dataset]' + sep_char + 'Sample Name\n')
 
+# remaining rows
 uep = xml_root.find('.//cell_line')
 suffix = 0
 for elm in uep.findall('phenotype_dataset'):
   row_str = source_name + sep_char 
-  for p in pmid:
-    row_str += 'PMID: ' + p + sep_char
+  # do we want a hierarchy of preferred citation types? (e.g., PMID,PMCID,DOI,URL)
+  if (len(pmid) > 0):
+    for p in pmid:
+      row_str += 'PMID: ' + p + sep_char
+  elif (len(url) > 0):
+    for p in url:
+      row_str += 'URL: ' + p + sep_char
+
+  print("cell_origin_characteristics=",cell_origin_characteristics)
   for c in cell_origin_characteristics:
     row_str += c + sep_char 
   row_str += elm.attrib['keywords'] + sep_char + source_name + '.' + str(suffix)
@@ -414,11 +446,13 @@ for elm in uep.findall('phenotype_dataset'):
       for idx in range(nvar,2*num_vars):
         fp.write(sep_char)
   #  fp.write(comment_str + sep_char + xml_file + '\n')
-    fp.write(xml_file + '\n')
+#    fp.write(xml_file + '\n')
+    fp.write(xml_base_filename + '\n')
     count += 1
 
   else:  # if no 'variables' present, just print minimal info
-    comment_str = id + '.0.' + str(count) + '\t' + '' + '\t' + xml_file + '\n' 
+#    comment_str = id + '.0.' + str(count) + '\t' + '' + '\t' + xml_file + '\n' 
+    comment_str = id + '.0.' + str(count) + '\t' + '' + '\t' + xml_base_filename + '\n' 
     count += 1
     fp.write(comment_str)
 
